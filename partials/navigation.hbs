@@ -1,13 +1,13 @@
-<nav>
-	<a href="/">
-		<div class="brand">
-			<img class="logo" src="//secure.makerforce.io/brand/mark/mark.white.svg" alt="{{@blog.title}}" />
-			<span class="name">{{@blog.title}}</span>
-		</div>
-	</a>
-    <ul class="navigation">
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
         {{#foreach navigation}}
-            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
     </ul>
-</nav>
+    <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
