@@ -1,4 +1,8 @@
-<div class="nav">
+<nav>
+	<a class="blog-logo" href="/{{!@blog.url}}">
+		{{#if @blog.logo}}<img src="//secure.makerforce.io/brand/mark/mark.white.svg{{!@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
+		<span class="blog-title">{{@blog.title}}{{!<img src="//secure.makerforce.io/brand/logo/logo.white.svg" />}}</span></a>
+	</a>
     <h3 class="nav-title">Menu</h3>
     <a href="#" class="nav-close">
         <span class="hidden">Close</span>
@@ -8,7 +12,4 @@
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
     </ul>
-    <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-</div>
-<span class="nav-cover"></span>
-    
+</nav>
