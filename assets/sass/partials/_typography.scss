@@ -1,0 +1,102 @@
+h1, h2, h3, h4, h5, h6 {
+	@include font-type(heading);
+	@include line-height(heading);
+}
+
+h1 {
+	@include font-size(h1);
+}
+
+h2 {
+	@include font-size(h2);
+}
+
+h3 {
+	@include font-size(h3);
+}
+
+h4 {
+	@include font-size(h4);
+}
+
+h5 {
+	@include font-size(h5);
+}
+
+h6 {
+	@include font-size(h6);
+}
+
+p, ol, ul {
+	@include font-size();
+	@include line-height(paragraph);
+	@include paragraphing(paragraph);
+}
+
+ol, ul {
+	margin-left: 0.8em;
+
+	ol, ul {
+		@include paragraphing(default);
+		margin-left: 1.6em;
+	}
+}
+ol {
+	list-style: decimal inside;
+}
+ul {
+	list-style: circle inside;
+}
+
+code, pre, 
+.hljs {
+	@include font-family(mono);
+	@include font-size();
+	@include line-height(code);
+	background-color: palette(code-background);
+	//color: palette(code);
+	padding: 0.3em 0.45em;
+	overflow-x: auto;
+}
+code,
+code.hljs {
+	display: inline;
+}
+pre,
+pre.hljs {
+	display: block;
+	@include paragraphing(paragraph);
+
+	code {
+		background: none; // Prevent background from covering neighbouring lines.
+		padding: 0;
+	}
+}
+
+small {
+	@include font-size(small);
+}
+
+sup, sub {
+	@include font-size(xsmall);
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
+
+b, strong {
+	@include font-type(bold);
+}
+i, em {
+	@include font-type(italic);
+}
+
+hr {
+	border: none;
+	background: none;
+	border-bottom: 1px solid palette(hr);
+	margin: 2.4rem;
+}

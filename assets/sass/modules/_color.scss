@@ -1,0 +1,25 @@
+$brand-color: #2bb6f6;
+$accent-color: #2bb6f6;
+$accent-dark-color: #0aa4ea;
+$text-color: black;
+$background-color: white;
+
+$palette: (
+	transparent: transparent,
+	background: $background-color,
+	brand: $brand-color,
+	accent: $accent-color,
+	accent-dark: $accent-dark-color,
+	text: $text-color,
+	link: $accent-color,
+	link-active: $accent-dark-color,
+	blur: mix($text-color, $background-color, 40%),
+	blur-active: mix($text-color, $background-color, 55%),
+	code-background: mix($text-color, $background-color, 2%),
+	code: mix($text-color, $background-color, 60%),
+	hr: mix($text-color, $background-color, 40%)
+);
+
+@function palette($name: transparent) {
+	@return map-get($palette, $name);
+}

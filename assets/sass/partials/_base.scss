@@ -1,0 +1,17 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+	font-size: $base-unit;
+	@include font-family();
+	-webkit-font-smoothing: antialiased;
+	color-profile: sRGB;
+}
+
+body {
+	overflow-x: hidden;
+	font-size: $font-size-base;
+	color: #000;
+}

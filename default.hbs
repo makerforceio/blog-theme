@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{! Document Settings }}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{!-- Document Settings --}}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    {{! Page Meta }}
-    <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+	{{!-- Page Meta --}}
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}" />
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	{{!-- Mobile Meta --}}
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="/favicon.ico{{!asset "favicon.ico"}}">
-    <link rel="apple-touch-icon-precomposed" href="//secure.makerforce.io/brand/mark-padded/mark-padded.whitebg.1024.png">
+	{{!-- Brand icon --}}
+	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
-    {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Slab:400,400italic,700,700italic" />
+	{{!-- Styles'n'Scripts --}}
+	{{!-- Syntax highlighting --}}
+	<link rel="stylesheet" href="{{asset "js/highlight/styles/solarized-light.css"}}" />
+	<script src="{{asset "js/highlight/highlight.pack.js"}}"></script>
+	<script src="{{asset "js/syntax.js"}}"></script>
+	{{!-- Icon font --}}
+	<link rel="stylesheet" type="text/css" href="{{asset "icons/style.css"}}" />
+	{{!-- Roboto Slab --}}
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" />
+	{{!-- Base styles --}}
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 
-    {{! Ghost outputs important style and meta data with this tag }}
-    {{ghost_head}}
+	{{!-- Ghost outputs important style and meta data with this tag --}}
+	{{ghost_head}}
 </head>
-<body class="{{body_class}} nav-closed">
+<body class="{{body_class}}">
+	
+	{{!-- IE disclaimer --}}
+	<!--[if lte IE 10]>
+	<div class="incompatible" style="font-size: 20px; color: #e00; padding: 40px">
+		You are using a horrible web browser. Things may look wonky. Please <a href="http://outdatedbrowser.com/">upgrade to a better browser. </a>
+	</div>
+	<script src="assets/REM-unit-polyfill/js/rem.min.js" type="text/javascript"></script>
+	<![endif]-->
 
-    {{navigation}}
+	{{!-- The blog navigation links --}}
+	{{navigation}}
 
-    <div class="site-wrapper">
+	<main>
 
-        {{! Everything else gets inserted here }}
-        {{{body}}}
+		{{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+		{{{body}}}
 
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
+	</main>
+	
+	{{!-- The blog footer --}}
+	{{> footer}}
 
-    </div>
+	{{!-- Ghost outputs important scripts and data with this tag --}}
+	{{ghost_foot}}
 
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-    {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+	{{!-- Other JavaScipt files --}}
+	{{!-- nothing yet --}}
 
 </body>
 </html>

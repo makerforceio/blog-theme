@@ -1,0 +1,23 @@
+.brand {
+	@include font-size(medium);
+	display: inline-block;
+
+	* {
+		vertical-align: middle;
+	}
+
+	a {
+		display: inline-block; // centers the brand name
+	}
+
+	.logo {
+		height: 1.8em;
+		width: 1.8em; // remove when ie is extinct
+		margin-right: 0.2em;
+	}
+
+	.name {
+		@include font-type(brand);
+		color: palette(brand);
+	}
+}

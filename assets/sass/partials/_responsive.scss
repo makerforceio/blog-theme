@@ -1,0 +1,42 @@
+main, footer {
+	max-width: 72rem;
+	max-width: calc(36rem + 30vw);
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+	.navigation {
+		.brand {
+			.name {
+				display: none;
+			}
+		}
+	}
+
+	.articles {
+		.article {
+			.post-tags {
+				display: none;
+			}
+		}
+	}
+
+	.pagination {
+		margin: 1.6rem 0;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	html {
+		font-size: 12px;
+	}
+	main, footer {
+		max-width: 72rem;
+	}
+}

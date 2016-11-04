@@ -1,0 +1,20 @@
+.link,
+.link:link,
+a[href]:link {
+	color: palette(link);
+	text-decoration: none;
+	@include font-type(link);
+}
+
+.link:visited,
+a[href]:visited {
+	color: palette(link);
+}
+
+.link:active,
+.link:hover,
+a[href]:active,
+a[href]:hover {
+	color: palette(link-active);
+}
+

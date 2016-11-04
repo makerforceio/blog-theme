@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('fonts/icomoon.ttf?13cjsg') format('truetype'),
+    url('fonts/icomoon.woff?13cjsg') format('woff'),
+    url('fonts/icomoon.svg?13cjsg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope:before {
+  content: "\f003";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-feed:before {
+  content: "\f09e";
+}
+.icon-globe:before {
+  content: "\f0ac";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-bitcoin:before {
+  content: "\f15a";
+}
+.icon-youtube:before {
+  content: "\f167";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-dribbble:before {
+  content: "\f17d";
+}
+.icon-reddit:before {
+  content: "\f1a1";
+}
+.icon-behance:before {
+  content: "\f1b4";
+}
+.icon-codepen:before {
+  content: "\f1cb";
+}
+.icon-twitch:before {
+  content: "\f1e8";
+}
+.icon-stripe:before {
+  content: "\f1f5";
+}
+.icon-facebook:before {
+  content: "\f230";
+}
+.icon-snapchat:before {
+  content: "\f2ac";
+}
+

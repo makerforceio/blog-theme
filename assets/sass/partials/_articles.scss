@@ -1,0 +1,16 @@
+.articles {
+	.article {
+		margin: 4rem 0;
+
+		&:first-child {
+			margin-top: 2rem;
+		}
+		&:last-child {
+			margin-bottom: 2rem;
+		}
+		
+		p {
+			@include paragraphing(paragraph-small);
+		}
+	}
+}

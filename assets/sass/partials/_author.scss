@@ -1,0 +1,11 @@
+.author {
+	.author-avatar {
+		width: 4.8em;
+		height: 4.8em;
+		border-radius: 50%;
+	}
+
+	.author-bio {
+		@include font-size(medium);
+	}
+}

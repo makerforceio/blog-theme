@@ -1,0 +1,22 @@
+// for .links see _navigation
+
+.footer {
+	padding: 0 2rem;
+	padding-top: 2rem;
+
+	a:link, a:visited {
+		color: palette(blur);
+	}
+	a:active, a:hover {
+		color: palette(blur-active);
+	}
+
+	[class^="icon-"] span, [class*=" icon-"] span {
+		display: none;
+	}
+
+	.social {
+		font-size: 1.8em;
+		@include line-height(default);
+	}
+}

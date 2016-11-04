@@ -1,0 +1,38 @@
+.article-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	color: palette(blur);
+	@include font-size(subtext);
+	//padding: 1rem 0;
+	padding: 0.8rem 0;
+
+	a:link, a:visited {
+		color: palette(blur);
+	}
+	a:active, a:hover {
+		color: palette(blur-active);
+	}
+
+	.author-avatar {
+		width: 1.8em;
+		height: 1.8em;
+		border-radius: 50%;
+		margin-right: 0.6em;
+	}
+
+	.author-name {
+		flex-grow: 1;
+	}
+
+	time, .post-date {
+		@include font-type(italic);
+	}
+
+	.post-tags {
+		@include font-type(italic);
+	}
+
+	
+}
