@@ -12,9 +12,9 @@ stages:
   - deploy
 
 build:
+  stage: build
   script:
     - npm build
-  stage: build
   artifacts:
     paths:
       - assets/
@@ -27,12 +27,12 @@ build:
       - tag.hbs
 
 deploy:
+  stage: deploy
   script:
     - echo "Deploying... "
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$GITLAB_DEPLOY_KEY")
     - mkdir -p ~/.ssh
     - scp -o StrictHostKeyChecking=no -r assets/ partials/ author.hbs default.hbs index.hbs page.hbs post.hbs tag.hbs gitlab-deploy@node1.makerforce.io:blog-theme/
-  stage: deploy
   only:
     - master
