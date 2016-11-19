@@ -12,7 +12,7 @@ build:
   stage: build
   script:
     - npm install --dev
-    - npm build
+    - npm run build
   artifacts:
     paths:
       - assets/
