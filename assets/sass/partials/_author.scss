@@ -4,4 +4,8 @@
 		height: 4.8em;
 		border-radius: 50%;
 	}
+
+	.links {
+		@include font-size(medium);
+	}
 }
