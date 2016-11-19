@@ -3,15 +3,17 @@
 }
 
 html {
-	overflow-x: hidden;
 	font-size: $base-unit;
 	@include font-family();
-	-webkit-font-smoothing: antialiased;
-	color-profile: sRGB;
+	overflow-x: hidden;
+
+	color-profile: sRGB; // Ensure embedded color profiles are not used 
+	-webkit-font-smoothing: antialiased; // Fancy text rendering for Safari/Chrome in macOS
+	-webkit-text-size-adjust: 100%; // Prevent text scaling in landscape iOS
 }
 
 body {
-	overflow-x: hidden;
 	font-size: $font-size-base;
 	color: #000;
+	overflow-x: hidden;
 }
