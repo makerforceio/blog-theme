@@ -4,8 +4,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed',
-          sourcemap: 'inline'
+          outputStyle: 'compressed',
+          sourceMap: true
         },
         files: {
           'assets/css/style.css': 'assets/sass/style.scss',
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.registerTask('default', ['sass', 'postcss']);
