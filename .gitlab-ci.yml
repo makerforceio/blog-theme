@@ -11,8 +11,8 @@ stages:
 build:
   stage: build
   script:
-    - apt update
-    - apt install ruby
+    - apt update -y
+    - apt install -y ruby
     - ruby -v
     - gem install sass
     - sass -v
