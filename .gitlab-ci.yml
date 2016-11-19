@@ -11,6 +11,9 @@ stages:
 build:
   stage: build
   script:
+    - ruby -v
+    - gem install sass
+    - sass -v
     - npm install --dev
     - npm run build
   artifacts:
