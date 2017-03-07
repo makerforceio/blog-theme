@@ -48,25 +48,27 @@ ul {
 	list-style: circle inside;
 }
 
-code, pre, 
 .hljs {
+	display: inline;
+}
+code,
+pre {
 	@include font-family(mono);
 	@include font-size();
 	@include line-height(code);
 	background-color: palette(code-background);
 	//color: palette(code);
-	padding: 0.3em 0.45em;
-	overflow-x: auto;
 }
-.hljs {
-	display: inline;
+code {
+	padding: 0.3em 0.45em;
 }
 pre {
 	@include paragraphing(paragraph);
+	overflow-x: auto;
 
-	code {
+	code,
+	code.hljs {
 		background: none; // Prevent background from covering neighbouring lines.
-		padding: 0;
 		display: block;
 	}
 }
