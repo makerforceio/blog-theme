@@ -48,28 +48,33 @@ ul {
 	list-style: circle inside;
 }
 
-.hljs {
-	display: inline;
-}
 code,
 pre {
 	@include font-family(mono);
 	@include font-size();
 	@include line-height(code);
 	background-color: palette(code-background);
-	//color: palette(code);
-}
-code {
 	padding: 0.3em 0.45em;
+	color: palette(code);
 }
-pre {
+.hljs { // override .hljs default styles
+	display: inline; // remove of display block
+	background-color: palette(code-background); // custom background
+	padding: 0.3em 0.45em; // custom padding
+	// color is not declared here to allow .hljs styles to dominate
+}
+pre,
+pre.hljs {
 	@include paragraphing(paragraph);
-	overflow-x: auto;
+	overflow-x: auto; // scrollable code
+	padding: 0; // so that a seprate block for <code> is not needed
+	display: block; // takes effect if .hljs was applied on pre
 
 	code,
 	code.hljs {
-		background: none; // Prevent background from covering neighbouring lines.
-		display: block;
+		background: none; // prevent background from covering neighbouring lines
+		display: block; // so that padding can be applied on code in a block manner
+		// padding is not set to zero so that the scrollable area is exactly the arcea covered by the background
 	}
 }
 
