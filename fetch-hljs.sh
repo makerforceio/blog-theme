@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=9.9.0
-LANGS="python javascript cpp arduino scss css xml json markdown http bash nginx php"
+LANGS="python javascript cpp scss css xml json markdown http bash nginx php"
 set -e
 
 BASE=$(dirname $(realpath "$0"))
