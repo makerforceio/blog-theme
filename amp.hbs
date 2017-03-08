@@ -207,10 +207,35 @@
 			display: inline-block
 		}
 
+		.brand .logo {
+			height: 1.8em;
+			width: 1.8em;
+			margin-right: 0.2em
+		}
+
 		.brand .name {
 			font-style: normal;
 			font-weight: bold;
 			color: #2bb6f6
+		}
+
+		.links {
+			margin-left: -0.2em;
+			margin-right: -0.2em
+		}
+
+		.links.inline {
+			display: inline-block
+		}
+
+		.links .link {
+			display: inline
+		}
+
+		.links .link a {
+			display: inline-block;
+			padding-left: 0.2em;
+			padding-right: 0.2em
 		}
 
 		.navigation {
@@ -236,6 +261,13 @@
 
 		.navigation .brand a:hover, .navigation .brand a:active {
 			filter: brightness(0.95)
+		}
+
+		.navigation .links {
+			vertical-align: middle;
+			text-transform: lowercase;
+			margin: 0.3em;
+			display: inline-block
 		}
 
 		header {
@@ -342,10 +374,26 @@
 			}
 		}
 
+		@media screen and (min-width: 960px) {
+			html {
+				font-size: 11px
+			}
+		}
+
+		@media screen and (min-width: 1440px) {
+			html {
+				font-size: 12px
+			}
+
+			main, footer {
+				max-width: 72rem
+			}
+		}
+
 		.tag-show audio {
 			width: 100%
 		}
-	
+
 	</style>
 
     {{!-- The AMP boilerplate --}}
@@ -357,7 +405,24 @@
 </head>
 
 <body class="amp-template">
-	{{navigation}}
+	
+	<nav class="navigation">
+		<div class="brand">
+			{{#if @blog.logo}}
+			<a href="{{@blog.url}}"><amp-img class="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="48" width="48" /></a>
+			{{else}}
+			<a href="{{@blog.url}}"><amp-img class="logo" src="{{asset "/images/mark.svg"}}" alt="{{@blog.title}}" height="48" width="48" /></a>
+			{{/if}}
+			<!-- for testing <span class="name">{{@blog.title}}</span> -->
+		</div>
+		{{#if @blog.navigation}}
+		<ul class="links">
+			{{#foreach navigation}}
+			<li class="link navigation-{{slug}} {{#if current}}current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+			{{/foreach}}
+		</ul>
+		{{/if}}
+	</nav>
 	
     {{#post}}
 	<main>
@@ -382,6 +447,7 @@
 	</main>
     {{/post}}
 
-	{{footer}}
+	{{> footer}}
+
 </body>
 </html>
