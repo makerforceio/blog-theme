@@ -428,11 +428,10 @@
 	<nav class="navigation">
 		<div class="brand">
 			{{#if @blog.logo}}
-			<a href="{{@blog.url}}"><amp-img class="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="48" width="48" /></a>
+			<a href="{{@blog.url}}"><amp-img class="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="32" width="32" /></a>
 			{{else}}
 			<a href="{{@blog.url}}"><amp-img class="logo" src="{{asset "/images/mark.svg"}}" alt="{{@blog.title}}" height="48" width="48" /></a>
 			{{/if}}
-			<!-- for testing <span class="name">{{@blog.title}}</span> -->
 		</div>
 		{{#if @blog.navigation}}
 		<ul class="links">
