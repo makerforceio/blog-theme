@@ -9,8 +9,8 @@ stages:
   - deploy
 
 before_script:
-  - apt-get update
-  - apt-get install -y unzip
+  - apt-get update && apt-get install -y unzip
+ 
 build:
   stage: build
   script:
