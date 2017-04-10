@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function loaded() {
+    var i = setInterval(function testLoaded() {
+        if (hljs) {
+            clearInterval(i);
+            highlight();
+        }
+    }, 10);
+});
+function highlight() {
 	var blocks = document.querySelectorAll('code');
 	[].forEach.call(blocks, function each(block) {
 		var languagePrefixRe = /\blang(?:uage)?-([\w-]+)\b/i;
@@ -19,4 +27,4 @@ document.addEventListener('DOMContentLoaded', function loaded() {
 
 		hljs.highlightBlock(block);
 	});
-});
+}
