@@ -1,4 +1,4 @@
-image: node:latest
+image: serverwentdown/alpine-node:lts
 
 cache:
   paths:
@@ -8,9 +8,6 @@ stages:
   - build
   - deploy
 
-before_script:
-  - apt-get update && apt-get install -y unzip
- 
 build:
   stage: build
   script:
