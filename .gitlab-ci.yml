@@ -1,4 +1,4 @@
-image: serverwentdown/alpine-node:lts
+image: serverwentdown/ubuntu-node:lts
 
 cache:
   paths:
