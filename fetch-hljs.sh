@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=9.9.0
+VERSION=9.12.0
 LANGS="python javascript cpp scss css xml json markdown http bash nginx php"
 set -e
 

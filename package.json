@@ -1,7 +1,7 @@
 {
   "name": "MakerForce",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "build": "./fetch-hljs.sh && grunt"
   },
@@ -10,7 +10,7 @@
     "grunt": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-postcss": "~0.8.0",
-    "grunt-sass": "~1.2.1"
+    "grunt-sass": "~2.0.0"
   },
   "engines": {
     "ghost": ">=0.9.0 <1.0.0"
