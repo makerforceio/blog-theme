@@ -17,11 +17,11 @@ $palette: (
 	text-dark: $text-dark-color,
 	link: $accent-color,
 	link-active: $accent-dark-color,
-	blur: mix($text-color, transparent, 40%),
-	blur-active: mix($text-color, transparent, 55%),
-	code-background: mix($text-color, transparent, 2%),
-	code: mix($text-color, transparent, 60%),
-	hr: mix($text-color, transparent, 40%)
+	blur: mix($text-color, $background-color, 40%),
+	blur-active: mix($text-color, $background-color, 55%),
+	code-background: mix(mix($text-color, $background-color), transparent, 4%),
+	code: mix($text-color, $background-color, 60%),
+	hr: mix($text-color, $background-color, 40%)
 );
 
 @function palette($name: transparent) {
