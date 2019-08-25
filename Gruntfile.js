@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
+          implementation: require('node-sass'),
           outputStyle: 'compressed',
           sourceMap: true
         },
@@ -17,7 +18,7 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer')({ browsers: 'last 2 versions' })
+          require('autoprefixer')
         ]
       },
       dist: {

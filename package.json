@@ -1,18 +1,27 @@
 {
   "name": "MakerForce",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
-    "build": "./fetch-hljs.sh && grunt"
+    "all": "yarn setup && yarn build && yarn zip",
+    "setup": "./fetch-hljs.sh",
+    "build": "grunt",
+    "zip": "zip -r blog-theme.zip package.json assets partials *.hbs"
   },
   "devDependencies": {
-    "autoprefixer": "~6.4.1",
-    "grunt": "~1.0.1",
+    "autoprefixer": "~9.6.1",
+    "grunt": "~1.0.3",
     "grunt-contrib-watch": "~1.0.0",
-    "grunt-postcss": "~0.8.0",
-    "grunt-sass": "~2.0.0"
+    "grunt-postcss": "~0.9.0",
+    "grunt-sass": "~3.1.0"
+  },
+  "config": {
+    "posts_per_page": 12
   },
   "engines": {
-    "ghost": ">=0.9.0 <1.0.0"
+    "ghost-api": "v2"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0"
   }
 }

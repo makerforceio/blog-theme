@@ -3,21 +3,25 @@ $accent-color: #2bb6f6;
 $accent-dark-color: #0aa4ea;
 $text-color: black;
 $background-color: white;
+$text-dark-color: white;
+$background-dark-color: #1a1a1a;
 
 $palette: (
 	transparent: transparent,
 	background: $background-color,
+	background-dark: $background-dark-color,
 	brand: $brand-color,
 	accent: $accent-color,
 	accent-dark: $accent-dark-color,
 	text: $text-color,
+	text-dark: $text-dark-color,
 	link: $accent-color,
 	link-active: $accent-dark-color,
-	blur: mix($text-color, $background-color, 40%),
-	blur-active: mix($text-color, $background-color, 55%),
-	code-background: mix($text-color, $background-color, 2%),
-	code: mix($text-color, $background-color, 60%),
-	hr: mix($text-color, $background-color, 40%)
+	blur: mix($text-color, transparent, 40%),
+	blur-active: mix($text-color, transparent, 55%),
+	code-background: mix($text-color, transparent, 2%),
+	code: mix($text-color, transparent, 60%),
+	hr: mix($text-color, transparent, 40%)
 );
 
 @function palette($name: transparent) {
