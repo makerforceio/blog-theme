@@ -20,7 +20,7 @@ $font-sizes: (
 
 $font-families: (
 	default: ("Roboto Slab", "Helvetica Neue", "Helvetica", "sans-serif"),
-	mono: ("Roboto Mono", "Menlo", "Monaco", "monospace")
+	mono: ("Fira Code", "Menlo", "Monaco", "monospace")
 );
 
 @mixin font-family($type: default) {

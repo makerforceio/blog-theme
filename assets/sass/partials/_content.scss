@@ -17,6 +17,11 @@ header,
 	width: 100vw;
 	object-fit: cover;
 	max-height: calc(10rem + 50vmin);
+
+	img {
+		// AMP
+		object-fit: cover;
+	}
 }
 
 .post-full > * {

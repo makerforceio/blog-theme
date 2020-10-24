@@ -10,6 +10,7 @@ module.exports = function(grunt) {
         },
         files: {
           'assets/css/style.css': 'assets/sass/style.scss',
+          'partials/style-amp.hbs': 'assets/sass/style-amp.scss',
           'assets/css/ie-lte-8.css': 'assets/sass/ie-lte-8.scss'
         }
       }

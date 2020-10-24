@@ -4,4 +4,5 @@ node_modules/
 assets/css/
 assets/js/highlight/
 partials/icons/
+partials/style-amp.hbs*
 blog-theme.zip

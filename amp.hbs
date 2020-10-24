@@ -4,419 +4,29 @@
     {{!-- Document Settings --}}
     <meta charset="utf-8">
 
+	{{!-- The AMP script --}}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
     {{!-- Page Meta --}}
     <title>{{meta_title}}</title>
     {{amp_ghost_head}}
 
     {{!-- Mobile Meta --}}
-    <meta name="HandheldFriendly" content="True" />
+    <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
     {{!-- Brand icon --}}
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-	<meta name="theme-color" content="#4bb6f6" />
+	<meta name="theme-color" content="#4bb6f6">
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:400,700" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Slab:wght@400;700&display=swap">
     <style amp-custom>
-		
-		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-		pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
-		q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
-		dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
-		thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
-		footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
-		mark, audio, video {
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-size: 100%;
-			font: inherit;
-			vertical-align: baseline
-		}
-
-		article, aside, details, figcaption, figure, footer, header, hgroup,
-		menu, nav, section {
-			display: block
-		}
-
-		body {
-			line-height: 1
-		}
-
-		ol, ul {
-			list-style: none
-		}
-
-		blockquote, q {
-			quotes: none
-		}
-
-		blockquote:before, blockquote:after, q:before, q:after {
-			content: '';
-			content: none
-		}
-
-		table {
-			border-collapse: collapse;
-			border-spacing: 0
-		}
-
-		main {
-			display: block
-		}
-
-		* , * :before, * :after {
-			box-sizing: border-box
-		}
-
-		html {
-			font-size: 10px;
-			font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", "sans-serif";
-			overflow-x: hidden;
-			-webkit-font-smoothing: antialiased;
-		}
-
-		body {
-			font-size: 1.5rem;
-			color: #000;
-			overflow-x: hidden
-		}
-
-		h1, h2, h3, h4, h5, h6 {
-			font-style: normal;
-			font-weight: bold;
-			line-height: 1.6
-		}
-
-		h1 {
-			font-size: 1.7em
-		}
-
-		h2 {
-			font-size: 1.5em
-		}
-
-		h3 {
-			font-size: 1.3em
-		}
-
-		h4 {
-			font-size: 1.1em
-		}
-
-		h5 {
-			font-size: 1em
-		}
-
-		h6 {
-			font-size: 1em
-		}
-
-		p, ol, ul {
-			font-size: 1em;
-			line-height: 1.6;
-			margin-top: 1.5rem;
-			margin-bottom: 1.5rem
-		}
-
-		ol, ul {
-			margin-left: 0.8em
-		}
-
-		ol ol, ol ul, ul ol, ul ul {
-			margin-top: 0;
-			margin-bottom: 0;
-			margin-left: 1.6em
-		}
-
-		ol {
-			list-style: decimal inside
-		}
-
-		ul {
-			list-style: circle inside
-		}
-
-		code, pre {
-			font-family: "Roboto Mono", "Menlo", "Monaco", "monospace";
-			font-size: 1em;
-			line-height: 1.4;
-			background-color: #fafafa;
-			padding: 0.3em 0.45em;
-			color: #666
-		}
-
-		pre {
-			margin-top: 1.5rem;
-			margin-bottom: 1.5rem;
-			overflow-x: auto;
-			padding: 0;
-			display: block
-		}
-
-		pre code {
-			background: none;
-			display: block
-		}
-
-		small {
-			font-size: 0.8em
-		}
-
-		sup, sub {
-			font-size: 0.6em
-		}
-
-		sup {
-			vertical-align: super
-		}
-
-		sub {
-			vertical-align: sub
-		}
-
-		b, strong {
-			font-style: inherit;
-			font-weight: bold
-		}
-
-		i, em {
-			font-style: italic;
-			font-weight: inherit
-		}
-
-		hr {
-			border: none;
-			background: none;
-			border-bottom: 1px solid #999;
-			margin: 2.4rem
-		}
-
-		.link, .link:link, a[href]:link {
-			color: #2bb6f6;
-			text-decoration: none;
-			font-style: inherit;
-			font-weight: bold
-		}
-
-		.link:visited, a[href]:visited {
-			color: #2bb6f6
-		}
-
-		.link:active, .link:hover, a[href]:active, a[href]:hover {
-			color: #0aa4ea
-		}
-
-		.brand {
-			font-size: 1.2em;
-			display: inline-block
-		}
-
-		.brand * {
-			vertical-align: middle
-		}
-
-		.brand a {
-			display: inline-block
-		}
-
-		.brand .logo {
-			height: 1.8em;
-			width: 1.8em;
-			margin-right: 0.2em
-		}
-
-		.brand .name {
-			font-style: normal;
-			font-weight: bold;
-			color: #2bb6f6
-		}
-
-		.links {
-			margin-left: -0.2em;
-			margin-right: -0.2em
-		}
-
-		.links.inline {
-			display: inline-block
-		}
-
-		.links .link {
-			display: inline
-		}
-
-		.links .link a {
-			display: inline-block;
-			padding-left: 0.2em;
-			padding-right: 0.2em
-		}
-
-		.navigation {
-			width: 100%;
-			padding: 2rem;
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-			-ms-flex-align: center;
-			align-items: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			text-align: center
-		}
-
-		.navigation .brand {
-			-ms-flex-positive: 2;
-			flex-grow: 2;
-			text-align: left;
-			margin-right: 1rem
-		}
-
-		.navigation .brand a:hover, .navigation .brand a:active {
-			filter: brightness(0.95)
-		}
-
-		.navigation .links {
-			vertical-align: middle;
-			text-transform: lowercase;
-			margin: 0.3em;
-			display: inline-block
-		}
-
-		header {
-			padding: 2.4rem 0;
-			text-align: center;
-			font-size: 1.2em
-		}
-
-		main {
-			padding: 0 2rem
-		}
-
-		main img {
-			max-width: 100%
-		}
-
-		.footer {
-			padding: 0 2rem;
-			padding-top: 2rem
-		}
-
-		.footer a:link, .footer a:visited {
-			color: #999
-		}
-
-		.footer a:active, .footer a:hover {
-			color: #737373
-		}
-
-		.footer [class^="icon-"] span, .footer [class * =" icon-"] span {
-			display: none
-		}
-
-		.footer .social {
-			font-size: 0.8em; /* modified */
-			line-height: 1.2
-		}
-
-		.footer .social i {
-			font-style: normal /* modified */
-		}
-
-		.article-meta {
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-			-ms-flex-align: center;
-			align-items: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			color: #999;
-			font-size: 0.9em;
-			padding: 0.8rem 0
-		}
-
-		.article-meta a:link, .article-meta a:visited {
-			color: #999
-		}
-
-		.article-meta a:active, .article-meta a:hover {
-			color: #737373
-		}
-
-		.article-meta .author-avatar {
-			width: 1.8em;
-			height: 1.8em;
-			border-radius: 50%;
-			margin-right: 0.6em
-		}
-
-		.article-meta .author-name {
-			-ms-flex-positive: 1;
-			flex-grow: 1
-		}
-
-		.article-meta time, .article-meta .post-date {
-			font-style: italic;
-			font-weight: inherit
-		}
-
-		.article-meta .post-tags {
-			font-style: italic;
-			font-weight: inherit
-		}
-
-		main, footer {
-			max-width: 72rem;
-			max-width: calc(36rem + 30vw);
-			margin: 0 auto
-		}
-
-		@media screen and (max-width: 480px) {
-			.navigation .brand .name {
-				display: none
-			}
-
-			header {
-				font-size: 1em
-			}
-
-			.articles .article .post-tags {
-				display: none
-			}
-
-			.pagination {
-				margin: 1.6rem 0
-			}
-		}
-
-		@media screen and (min-width: 960px) {
-			html {
-				font-size: 11px
-			}
-		}
-
-		@media screen and (min-width: 1440px) {
-			html {
-				font-size: 12px
-			}
-
-			main, footer {
-				max-width: 72rem
-			}
-		}
-
-		.tag-show audio {
-			width: 100%
-		}
-
+{{> style-amp}}
 	</style>
 
     {{!-- The AMP boilerplate --}}
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     {{amp_components}}
 
@@ -424,47 +34,73 @@
 
 <body class="amp-template">
 	
+	{{!-- The blog navigation links --}}
 	<nav class="navigation">
 		<div class="brand">
 			{{#if @site.logo}}
-			<a href="{{@site.url}}"><amp-img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" height="32" width="32" /></a>
+				<a href="{{@site.url}}"><amp-img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" height="36" width="36"></amp-img></a>
 			{{else}}
-			<a href="{{@site.url}}"><amp-img class="logo" src="{{asset "/images/mark.svg"}}" alt="{{@site.title}}" height="48" width="48" /></a>
+				{{@site.title}}
 			{{/if}}
 		</div>
-		{{#if @site.navigation}}
-		<ul class="links">
-			{{#foreach navigation}}
-			<li class="link navigation-{{slug}} {{#if current}}current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
-			{{/foreach}}
-		</ul>
-		{{/if}}
+		{{navigation}}
 	</nav>
-	
+
     {{#post}}
 	<main>
 
-		<article class="{{post_class}}">
+		{{#if feature_image}}
+			<amp-img class="post-feature-image" src="{{feature_image}}" width="1024" height="1024" layout="responsive"></amp-img>
+		{{/if}}
+
+		<article class="post-full {{post_class}}">
 			<header>
 				<h1>{{title}}</h1>
 			</header>
 
-            {{amp_content}}
+			{{amp_content}}
 
-			<footer class="article-meta">
-				{{#if authors}}
-				{{#foreach authors}}
-				<a class="author-name" href="{{url}}">{{name}}</a>
-				{{/foreach}}
-				{{/if}}
-				<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-				<span class="post-tags">&nbsp;{{tags prefix="on "}}</span>
-			</footer>
-
+			<div class="post-meta">
+				<footer class="article-meta">
+					<span class="authors">
+					{{#if authors}}
+						{{#foreach authors}}
+							<span class="author">
+								<a href="{{url}}">
+									{{#if profile_image}}
+										<amp-img class="author-avatar" alt="{{name}}" src="{{img_url profile_image size="xs"}}" width="32" height="32"></amp-img>
+									{{/if}}
+									<span class="author-name">{{name}}</a>
+								</a>
+							</span>
+						{{/foreach}}
+					{{/if}}
+					</span>
+					<span class="details">
+						<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix="on "}}
+					</span>
+				</footer>
+			</div>
 		</article>
 
 	</main>
     {{/post}}
+
+	{{!-- The blog footer --}}
+	<footer class="footer">
+		<div class="group">
+			<div class="brand">
+				<span class="name">{{@site.title}}</span>
+			</div>
+		</div>
+		<div class="group">
+			{{navigation type="secondary"}}
+		</div>
+		<div class="group">
+			{{> navigation-social}}
+		</div>
+	</footer>
+	
 
 </body>
 </html>
