@@ -1,6 +1,7 @@
 .post-full {
 	.row {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 2rem;
 
 		.col {

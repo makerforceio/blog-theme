@@ -1,0 +1,11 @@
+// Compatibility with older Markdown posts
+.post-full {
+	& > .instagram-media {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	& > p img {
+		max-width: 100%;
+	}
+}

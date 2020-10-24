@@ -21,6 +21,8 @@ body {
 		color: palette(text-dark);
 		background-color: palette(background-dark); 
 	}
+
+	overflow-wrap: break-word; // TODO: Test the impact of this on all pages
 }
 
 @media screen and (min-width: 960px) {

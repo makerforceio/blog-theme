@@ -2,29 +2,29 @@
 <html>
 <head>
 	{{!-- Document Settings --}}
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	{{!-- Page Meta --}}
 	<title>{{meta_title}}</title>
 	{{ghost_head}}
 
 	{{!-- Mobile Meta --}}
-	<meta name="HandheldFriendly" content="True" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	{{!-- Brand icon --}}
 	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 	<link rel="mask-icon" href="{{asset "images/mask-icon.svg"}}" color="#4bb6f6">
-	<meta name="theme-color" content="#4bb6f6" />
+	<meta name="theme-color" content="#4bb6f6">
 
 	{{!-- Styles'n'Scripts --}}
 	{{!-- Base styles --}}
-	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+	<link rel="stylesheet" href="{{asset "css/style.css"}}">
 	{{!-- Roboto Slab --}}
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto+Mono" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Slab:wght@400;700&display=swap">
 	{{!-- Syntax highlighting --}}
-	<link rel="stylesheet" href="{{asset "js/highlight/styles/solarized-light.min.css"}}" />
+	<link rel="stylesheet" href="{{asset "js/highlight/styles/solarized-light.min.css"}}">
 	<script src="{{asset "js/highlight/highlight.min.js"}}" defer></script>
 	<script src="{{asset "js/syntax.js"}}" defer></script>
 	{{!-- Improved mailto links --}}
@@ -44,7 +44,7 @@
 	<nav class="navigation">
 		<div class="brand">
 			{{#if @site.logo}}
-				<a href="{{@site.url}}"><img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" height="48" width="48" /></a>
+				<a href="{{@site.url}}"><img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" height="48" /></a>
 			{{else}}
 				{{@site.title}}
 			{{/if}}

@@ -120,12 +120,6 @@ blockquote {
 	padding-right: 2em;
 }
 
-// Compatibility
-p img {
-	max-width: 100%;
-}
-// End Compatibility
-
 figure {
 	@include font-size();
 	@include line-height(paragraph);
@@ -135,7 +129,7 @@ figure {
 	picture,
 	iframe {
 		max-width: 100%;
-		border-radius: 0.25em;
+		border-radius: $base-radius;
 	}
 
 	iframe {
@@ -163,7 +157,7 @@ pre {
 	@include font-family(mono);
 	@include font-size();
 	@include line-height(code);
-	border-radius: 0.25em;
+	border-radius: $base-radius;
 	padding: 0.3em 0.45em;
 
 	background-color: palette(code-background);

@@ -11,6 +11,14 @@ header,
 	@extend .limit-width;
 }
 
+.post-feature-image {
+	margin-left: -2rem;
+	margin-right: -2rem;
+	width: 100vw;
+	object-fit: cover;
+	max-height: calc(10rem + 50vmin);
+}
+
 .post-full > * {
 	@extend .limit-width;
 	// Force inline elements into block elements
@@ -22,5 +30,6 @@ header,
 }
 
 main {
-	margin: 0 2rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
 }

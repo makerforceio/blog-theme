@@ -18,6 +18,8 @@
 @import "components/pagination";
 @import "components/article-meta";
 @import "components/cols";
+// Compatibility
+@import "components/compat-markdown";
 
 // Organisms
 @import "partials/content";
