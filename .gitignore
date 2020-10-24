@@ -1,4 +1,6 @@
-npm-debug.log
+.DS_Store
+
 node_modules/
 assets/css/
 assets/js/highlight/
+blog-theme.zip

@@ -13,14 +13,12 @@
 			<a class="read-more" href="{{url}}">&raquo;</a>
 		</p>
 		<footer class="article-meta">
-			{{#if authors}}
-			{{#foreach authors}}
+			{{#author}}
 			{{#if profile_image}}
 			<img class="author-avatar" alt="{{name}}'s profile" src="{{img_url profile_image}}" width="32" />
 			{{/if}}
 			<a class="author-name" href="{{url}}">{{name}}</a>
-			{{/foreach}}
-			{{/if}}
+			{{/author}}
 			<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
 			<span class="post-tags">&nbsp;{{tags prefix="on "}}</span>
 		</footer>

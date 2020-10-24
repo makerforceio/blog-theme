@@ -1,22 +1,22 @@
 #!/bin/bash
 
 VERSION=10.3.1
-LANGS="python javascript cpp scss css xml json markdown http bash nginx php go rust tex typescript"
-set -e
+LANGS="python javascript cpp scss css xml json markdown http bash nginx php go rust typescript"
 
-BASE=$(dirname $(realpath "$0"))
-[ ! -d $BASE/tmp/ ]
-mkdir -p $BASE/tmp/
-wget -O $BASE/tmp/highlight.js.zip https://github.com/isagalaev/highlight.js/archive/$VERSION.zip
-unzip $BASE/tmp/highlight.js -d $BASE/tmp/
+set -eu
 
-cd $BASE/tmp/highlight.js-*/
+mkdir -p tmp/
+wget -O tmp/highlight.js.zip https://github.com/highlightjs/highlight.js/archive/$VERSION.zip
+unzip tmp/highlight.js.zip -d tmp/
+
+cd tmp/highlight.js-*/
 npm install
 node ./tools/build.js -t cdn $LANGS
-echo "Copying ./build/* to $BASE/assets/js/highlight/"
-rm -r $BASE/assets/js/highlight/ || true
-mkdir -p $BASE/assets/js/highlight/
-cp -R ./build/* $BASE/assets/js/highlight/
-cd $BASE/
+cd ../../
 
-rm -r $BASE/tmp/
+echo "Copying build to assets/js/highlight/"
+rm -r assets/js/highlight/ || true
+mkdir -p assets/js/highlight/
+cp -R tmp/highlight.js-*/build/* assets/js/highlight/
+
+rm -r tmp/

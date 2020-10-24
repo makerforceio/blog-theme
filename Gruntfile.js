@@ -14,26 +14,14 @@ module.exports = function(grunt) {
         }
       }
     },
-    postcss: {
-      options: {
-        map: true,
-        processors: [
-          require('autoprefixer')
-        ]
-      },
-      dist: {
-        src: 'assets/css/*.css'
-      }
-    },
     watch: {
       css: {
         files: 'assets/sass/**/*',
-        tasks: ['sass', 'postcss']
+        tasks: ['sass']
       }
     }
   });
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-postcss');
-  grunt.registerTask('default', ['sass', 'postcss']);
+  grunt.registerTask('default', ['sass']);
 }
