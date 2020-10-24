@@ -120,6 +120,12 @@ blockquote {
 	padding-right: 2em;
 }
 
+// Compatibility
+p {
+	max-width: 100%;
+}
+// End Compatibility
+
 figure {
 	@include font-size();
 	@include line-height(paragraph);
