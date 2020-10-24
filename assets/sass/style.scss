@@ -14,7 +14,6 @@
 
 // Molecules
 @import "components/nav";
-@import "components/header";
 @import "components/pagination";
 @import "components/article-meta";
 @import "components/cols";
@@ -22,6 +21,7 @@
 @import "components/compat-markdown";
 
 // Organisms
+@import "partials/header";
 @import "partials/content";
 @import "partials/articles";
 @import "partials/navigation";

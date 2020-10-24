@@ -3,10 +3,12 @@
 h1, h2, h3, h4, h5, h6 {
 	@include font-type(heading);
 	@include line-height(heading);
+	@include paragraphing(paragraph-small);
 }
 
 h1 {
 	@include font-size(h1);
+	margin-top: $font-size-base * 3;
 }
 
 h2 {
@@ -96,19 +98,17 @@ ol, ul {
 	@include font-size();
 	@include line-height(paragraph);
 	@include paragraphing(paragraph);
-
-	margin-left: 0.8em;
+	padding-left: 1.5em;
 
 	ol, ul {
 		@include paragraphing(default);
-		margin-left: 1.6em;
 	}
 }
 ol {
-	list-style: decimal inside;
+	list-style: decimal outside;
 }
 ul {
-	list-style: disc inside;
+	list-style: disc outside;
 }
 
 blockquote {
