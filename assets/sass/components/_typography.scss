@@ -121,7 +121,7 @@ blockquote {
 }
 
 // Compatibility
-p {
+p img {
 	max-width: 100%;
 }
 // End Compatibility
@@ -163,15 +163,18 @@ pre {
 	@include font-family(mono);
 	@include font-size();
 	@include line-height(code);
-	background-color: palette(code-background);
+	border-radius: 0.25em;
 	padding: 0.3em 0.45em;
+
+	background-color: palette(code-background);
 	color: palette(code);
 }
 pre.hljs,
 code.hljs { // override .hljs default styles
 	display: inline; // remove of display block
-	background-color: palette(code-background); // custom background
 	padding: 0.3em 0.45em; // custom padding
+
+	background-color: palette(code-background); // custom background
 	// color is not declared here to allow .hljs styles to dominate
 }
 pre,
@@ -183,9 +186,9 @@ pre.hljs {
 
 	code,
 	code.hljs {
-		background: none; // prevent background from covering neighbouring lines
 		display: block; // so that padding can be applied on code in a block manner
 		// padding is not set to zero so that the scrollable area is exactly the arcea covered by the background
+		background: none; // prevent background from covering neighbouring lines
 	}
 }
 

@@ -1,21 +1,28 @@
-.post-full .kg-image-card {
-	text-align: center;
-}
-
-.post-full .kg-width-wide,
-.post-full .width-wide {
-    max-width: 1040px;
-
-	img {
-		width: 100%;
+.post-full {
+	.kg-embed-card > * {
+		margin-left: auto;
+		margin-right: auto;
 	}
-}
 
-.post-full .kg-width-full,
-.post-full .width-full {
-    max-width: 100vw;
+	.kg-image-card {
+		text-align: center;
+	}
 
-	img {
-		width: 100%;
+	.kg-width-wide,
+	.width-wide {
+		max-width: 1040px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.kg-width-full,
+	.width-full {
+		max-width: 100vw;
+
+		img {
+			width: 100%;
+		}
 	}
 }
