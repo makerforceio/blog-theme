@@ -454,9 +454,11 @@
             {{amp_content}}
 
 			<footer class="article-meta">
-				{{#author}}
+				{{#if authors}}
+				{{#foreach authors}}
 				<a class="author-name" href="{{url}}">{{name}}</a>
-				{{/author}}
+				{{/foreach}}
+				{{/if}}
 				<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
 				<span class="post-tags">&nbsp;{{tags prefix="on "}}</span>
 			</footer>

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-VERSION=9.15.10
-LANGS="python javascript cpp scss css xml json markdown http bash nginx php"
+VERSION=10.3.1
+LANGS="python javascript cpp scss css xml json markdown http bash nginx php go rust tex typescript"
 set -e
 
 BASE=$(dirname $(realpath "$0"))
