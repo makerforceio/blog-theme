@@ -7,11 +7,11 @@ $font-sizes: (
 	medium: 1.2em,
 	large: 4em,
 	h1: 1.7em,
-	h2: 1.5em,
-	h3: 1.3em,
-	h4: 1.1em,
-	h5: 1em,
-	h6: 1em
+	h2: 1.4em,
+	h3: 1.2em,
+	h4: 1em,
+	h5: 0.8em,
+	h6: 0.6em
 );
 
 @mixin font-size($type: normal) {
