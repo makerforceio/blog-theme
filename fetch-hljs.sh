@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=10.3.1
-LANGS="python javascript cpp scss css xml json markdown http bash nginx php go rust typescript"
+LANGS="rust cpp shell json"
 TARGET="assets/js/highlight"
 
 set -eu

@@ -1,3 +1,4 @@
+// TODO: prevent double loading
 document.querySelectorAll('pre code').forEach((block) => {
 	// Detect language and check if loaded
 	const languageDetectRe = /\blang(?:uage)?-([\w-]+)\b/i;
