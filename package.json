@@ -6,11 +6,14 @@
 		"email": "ambrose@makerforce.io",
 		"name": "Ambrose Chua"
 	},
-	"keywords": ["ghost-theme"],
+	"keywords": [
+		"ghost-theme"
+	],
 	"scripts": {
 		"all": "yarn setup && yarn build && yarn zip",
 		"setup": "./fetch-hljs.sh",
 		"build": "grunt",
+		"watch": "grunt watch",
 		"zip": "zip -r blog-theme.zip package.json assets partials *.hbs"
 	},
 	"devDependencies": {
