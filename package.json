@@ -18,6 +18,6 @@
     "posts_per_page": 12
   },
   "engines": {
-    "ghost-api": "v2"
+    "ghost-api": "v3"
   }
 }
