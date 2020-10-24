@@ -5,23 +5,32 @@
 html {
 	font-size: $base-unit;
 	@include font-family();
-	overflow-x: hidden;
-
-	color-profile: sRGB; // Ensure embedded color profiles are not used 
 	-webkit-font-smoothing: antialiased; // Fancy text rendering for Safari/Chrome in macOS
 	-webkit-text-size-adjust: 100%; // Prevent text scaling in landscape iOS
+
+	color-profile: sRGB; // Ensure embedded colour profiles are not used 
 }
 
 body {
 	font-size: $font-size-base;
+
 	color: palette(text);
 	background-color: palette(background); 
-	overflow-x: hidden;
-}
 
-@media (prefers-color-scheme: dark) {
-	body {
+	@media (prefers-color-scheme: dark) {
 		color: palette(text-dark);
 		background-color: palette(background-dark); 
+	}
+}
+
+@media screen and (min-width: 960px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	html {
+		font-size: 12px;
 	}
 }

@@ -4,15 +4,27 @@
 @import "modules/color";
 @import "modules/typography";
 
-@import "partials/compatibility";
+// Atoms
+@import "components/base";
+@import "components/typography";
+@import "components/koenig";
+@import "components/icons";
+@import "components/brand";
+@import "components/author";
 
-@import "partials/base";
-@import "partials/typography";
-@import "partials/links";
-@import "partials/brand";
+// Molecules
+@import "components/nav";
+@import "components/header";
+@import "components/pagination";
+@import "components/article-meta";
 
+// Organisms
+@import "partials/content";
+@import "partials/articles";
 @import "partials/navigation";
-@import "partials/header";
+@import "partials/footer";
+
+/*
 @import "partials/content";
 @import "partials/footer";
 
@@ -29,3 +41,4 @@
 @import "content/tag-show";
 
 @import "content/page-team";
+*/

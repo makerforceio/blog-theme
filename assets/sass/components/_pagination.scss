@@ -1,0 +1,42 @@
+.pagination {
+	margin: $font-size-base * 1 0;
+	position: relative;
+	min-height: 1em; // Hack
+
+	@include font-size(subtext);
+
+	.page-number {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+
+		@media (max-width: 320px) {
+			position: static;
+			display: block;
+		}
+	}
+
+	.older-posts,
+	.newer-posts {
+		position: absolute;
+		width: 50%;
+		z-index: 10; // Bring it on top of .page-number
+
+		@media (max-width: 320px) {
+			position: static;
+			display: block;
+			width: 100%;
+		}
+	}
+	.older-posts {
+		left: 50%;
+		text-align: right;
+	}
+	.newer-posts {
+		left: 0%;
+		text-align: left;
+	}
+
+	color: palette(blur);
+}

@@ -1,0 +1,186 @@
+// Headers
+
+h1, h2, h3, h4, h5, h6 {
+	@include font-type(heading);
+	@include line-height(heading);
+}
+
+h1 {
+	@include font-size(h1);
+}
+
+h2 {
+	@include font-size(h2);
+}
+
+h3 {
+	@include font-size(h3);
+}
+
+h4 {
+	@include font-size(h4);
+}
+
+h5 {
+	@include font-size(h5);
+}
+
+h6 {
+	@include font-size(h6);
+}
+
+// Styles
+
+small {
+	@include font-size(small);
+}
+
+sup, sub {
+	@include font-size(xsmall);
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
+
+b, strong {
+	@include font-type(bold);
+}
+i, em {
+	@include font-type(italic);
+}
+
+// Links
+
+a[href]:link {
+	color: palette(link);
+	text-decoration: none;
+	@include font-type(link);
+}
+
+a[href]:visited {
+	color: palette(link);
+}
+
+a[href]:active,
+a[href]:hover {
+	color: palette(link-active);
+}
+
+.link-blur {
+	a[href]:link {
+		color: palette(blur);
+	}
+
+	a[href]:visited {
+		color: palette(blur);
+	}
+
+	a[href]:active,
+	a[href]:hover {
+		color: palette(blur-active);
+	}
+}
+
+// Contents
+
+p {
+	@include font-size();
+	@include line-height(paragraph);
+	@include paragraphing(paragraph);
+}
+
+ol, ul {
+	@include font-size();
+	@include line-height(paragraph);
+	@include paragraphing(paragraph);
+
+	margin-left: 0.8em;
+
+	ol, ul {
+		@include paragraphing(default);
+		margin-left: 1.6em;
+	}
+}
+ol {
+	list-style: decimal inside;
+}
+ul {
+	list-style: disc inside;
+}
+
+blockquote {
+	@include font-size();
+	@include line-height(paragraph);
+	@include paragraphing(paragraph);
+	border-left: 6px solid palette(accent);
+	padding-left: 1em;
+	padding-right: 2em;
+}
+
+figure {
+	@include font-size();
+	@include line-height(paragraph);
+	@include paragraphing(paragraph);
+
+	img {
+		max-width: 100%;
+		border-radius: 0.25em;
+	}
+
+	figcaption {
+		@include font-size(smaller);
+		@include font-type(caption);
+		@include line-height(default);
+		@include paragraphing(paragraph-small);
+
+		text-align: center;
+		padding-left: 15%;
+		padding-right: 15%;
+		// BUG: When the photo is too small, the caption might be longer than the photo 
+
+		color: palette(blur);
+	}
+}
+
+code,
+pre {
+	@include font-family(mono);
+	@include font-size();
+	@include line-height(code);
+	background-color: palette(code-background);
+	padding: 0.3em 0.45em;
+	color: palette(code);
+}
+pre.hljs,
+code.hljs { // override .hljs default styles
+	display: inline; // remove of display block
+	background-color: palette(code-background); // custom background
+	padding: 0.3em 0.45em; // custom padding
+	// color is not declared here to allow .hljs styles to dominate
+}
+pre,
+pre.hljs {
+	@include paragraphing(paragraph);
+	overflow-x: auto; // scrollable code
+	padding: 0; // so that a seprate block for <code> is not needed
+	display: block; // takes effect if .hljs was applied on pre
+
+	code,
+	code.hljs {
+		background: none; // prevent background from covering neighbouring lines
+		display: block; // so that padding can be applied on code in a block manner
+		// padding is not set to zero so that the scrollable area is exactly the arcea covered by the background
+	}
+}
+
+hr {
+	border: none;
+	background: palette(hr);
+	background-clip: content-box;
+	height: 3px;
+	padding: 0 6em;
+	margin: 2.5em;
+}

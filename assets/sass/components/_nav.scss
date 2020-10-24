@@ -1,0 +1,14 @@
+.nav {
+	margin-left: -0.2em;
+	margin-right: -0.2em;
+
+	li {
+		display: inline;
+
+		a {
+			display: inline-block;
+			padding-left: 0.2em;
+			padding-right: 0.2em;
+		}
+	}
+}

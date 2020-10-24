@@ -1,0 +1,15 @@
+.icon {
+	font-size: 1.2em;
+	vertical-align: middle;
+
+	svg {
+		height: 1em;
+	}
+	svg path {
+		fill: currentColor;
+	}
+
+	&.icon-medium {
+		font-size: 1.6em;
+	}
+}

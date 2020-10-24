@@ -2,7 +2,7 @@
 
 VERSION=10.3.1
 LANGS="python javascript cpp scss css xml json markdown http bash nginx php go rust typescript"
-TARGET="assets/js/highlight/"
+TARGET="assets/js/highlight"
 
 set -eu
 
@@ -15,9 +15,9 @@ npm install
 node ./tools/build.js -t cdn $LANGS
 cd ../../
 
-echo "Copying build to assets/js/highlight/"
-rm -r assets/js/highlight/ || true
-mkdir -p assets/js/highlight/
-cp -R tmp/highlight.js-*/build/* $TARGET
+echo "Copying build to $TARGET/"
+rm -r $TARGET/ || true
+mkdir -p $TARGET/
+cp -R tmp/highlight.js-*/build/* $TARGET/
 
 rm -r tmp/

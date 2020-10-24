@@ -1,22 +1,19 @@
-// for .links see _navigation
-
 .footer {
-	padding: 0 2rem;
-	padding-top: 2rem;
+	@extend .link-blur;
+	margin: 2rem;
+	margin-top: $font-size-base * 4;
 
-	a:link, a:visited {
-		color: palette(blur);
+	.nav {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
-	a:active, a:hover {
-		color: palette(blur-active);
-	}
-
-	[class^="icon-"] span, [class*=" icon-"] span {
-		display: none;
+	
+	.nav.social {
+		line-height: 1; // Removes spaces around icons
 	}
 
-	.social {
-		font-size: 1.8em;
-		@include line-height(default);
+	.group {
+		@extend .limit-width;
+		@include paragraphing(links);
 	}
 }

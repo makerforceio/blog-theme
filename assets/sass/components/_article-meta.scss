@@ -1,0 +1,31 @@
+.article-meta {
+	@extend .link-blur;
+	@include line-height(paragraph);
+	@include paragraphing(paragraph-small);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.authors, .details {
+		flex: 1 1 auto;
+		display: block;
+		@include paragraphing(paragraph-small);
+	}
+
+	.details {
+		text-align: right;
+	}
+
+	.author {
+		margin-right: 1em;
+	}
+	.author-name {
+		margin-left: 0.25em;
+	}
+	.author-avatar {
+		width: 3.2rem;
+	}
+
+}

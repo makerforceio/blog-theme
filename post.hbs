@@ -2,26 +2,16 @@
 
 {{#post}}
 
-<article class="{{post_class}}">
+<article class="post-full {{post_class}}">
 	<header>
 		<h1>{{title}}</h1>
 	</header>
 
 	{{content}}
 
-	<footer class="article-meta">
-		{{#if authors}}
-		{{#foreach authors}}
-		{{#if profile_image}}
-		<img class="author-avatar" alt="{{name}}'s profile" src="{{img_url profile_image}}" width="32" />
-		{{/if}}
-		<a class="author-name" href="{{url}}">{{name}}</a>
-		{{/foreach}}
-		{{/if}}
-		<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-		<span class="post-tags">&nbsp;{{tags prefix="on "}}</span>
-	</footer>
-
+	<div class="post-meta">
+		{{> "article-meta"}}
+	</div>
 </article>
 
 {{!-- TODO: Links to Previous/Next posts --}}

@@ -4,17 +4,39 @@
 
 <header class="author">
 	{{#if profile_image}}
-	<img class="author-avatar" alt="{{name}}'s profile" src="{{img_url profile_image}}" width="32" />
+		<img class="author-avatar" alt="{{name}}'s profile" src="{{img_url profile_image}}" width="32" />
 	{{/if}}
 	<h1 class="author-name">{{name}}</h2>
 	{{#if bio}}
-	<p class="author-bio">
-		{{bio}}
-	</p>
+		<p class="author-bio">
+			{{bio}}
+		</p>
 	{{/if}}
-	<ul class="links inline">
+
+	<ul class="nav">
 		{{#if website}}
-		<li class="link"><a href="{{website}}"><i class="icon-globe"></i></a></li>
+			<li>
+				<a href="{{website}}" title="Website">
+					{{!--
+					<span class="icon">
+						{{> icons/solid/globe-asia}}
+					</span>
+					--}}
+					{{website}}
+				</a>
+			</li>
+		{{/if}}
+		{{#if twitter}}
+			<li>
+				<a href="{{twitter_url}}" title="Twitter">
+					{{!--
+					<span class="icon">
+						{{> icons/brands/twitter}}
+					</span>
+					--}}
+					{{twitter}}
+				</a>
+			</li>
 		{{/if}}
 	</ul>
 </header>

@@ -19,9 +19,9 @@ $palette: (
 	link-active: $accent-dark-color,
 	blur: mix($text-color, $background-color, 40%),
 	blur-active: mix($text-color, $background-color, 55%),
-	code-background: mix(mix($text-color, $background-color), transparent, 4%),
+	code-background: mix(mix($text-color, $background-color), transparent, 8%),
 	code: mix($text-color, $background-color, 60%),
-	hr: mix($text-color, $background-color, 40%)
+	hr: $accent-color, 
 );
 
 @function palette($name: transparent) {

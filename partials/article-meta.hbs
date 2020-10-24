@@ -1,0 +1,19 @@
+<footer class="article-meta">
+	<span class="authors">
+	{{#if authors}}
+		{{#foreach authors}}
+			<span class="author">
+				<a href="{{url}}">
+					{{#if profile_image}}
+						<img class="author-avatar" alt="{{name}}" src="{{img_url profile_image size="xs"}}" width="48" />
+					{{/if}}
+					<span class="author-name">{{name}}</a>
+				</a>
+			</span>
+		{{/foreach}}
+	{{/if}}
+	</span>
+	<span class="details">
+		<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix="on "}}
+	</span>
+</footer>

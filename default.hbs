@@ -23,13 +23,12 @@
 	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 	{{!-- Roboto Slab --}}
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto+Mono" />
-	{{!-- Icon font --}}
-	<link rel="stylesheet" type="text/css" href="{{asset "icons/style.css"}}" />
-	<link rel="stylesheet" type="text/css" href="https://makerforce.io/cdn/icomoon-social/style.css" />
 	{{!-- Syntax highlighting --}}
 	<link rel="stylesheet" href="{{asset "js/highlight/styles/solarized-light.min.css"}}" />
 	<script src="{{asset "js/highlight/highlight.min.js"}}" defer></script>
 	<script src="{{asset "js/syntax.js"}}" defer></script>
+	{{!-- Improved mailto links --}}
+	<script src="{{asset "js/mailgo.min.js"}}" defer></script>
 </head>
 <body class="{{body_class}}">
 	
@@ -42,7 +41,16 @@
 	<![endif]-->
 
 	{{!-- The blog navigation links --}}
-	{{navigation}}
+	<nav class="navigation">
+		<div class="brand">
+			{{#if @site.logo}}
+				<a href="{{@site.url}}"><img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" height="48" width="48" /></a>
+			{{else}}
+				{{@site.title}}
+			{{/if}}
+		</div>
+		{{navigation}}
+	</nav>
 
 	<main>
 
@@ -52,7 +60,19 @@
 	</main>
 	
 	{{!-- The blog footer --}}
-	{{> footer}}
+	<footer class="footer">
+		<div class="group">
+			<div class="brand">
+				<span class="name">{{@site.title}}</span>
+			</div>
+		</div>
+		<div class="group">
+			{{navigation type="secondary"}}
+		</div>
+		<div class="group">
+			{{> navigation-social}}
+		</div>
+	</footer>
 
 	{{!-- Ghost outputs important scripts and data with this tag --}}
 	{{ghost_foot}}

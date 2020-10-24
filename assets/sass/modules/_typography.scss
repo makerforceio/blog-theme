@@ -30,6 +30,7 @@ $font-families: (
 $font-types: (
 	brand: (style: normal, weight: bold),
 	default: (style: normal, weight: normal),
+	caption: (style: italic, weight: normal),
 	heading: (style: normal, weight: bold),
 	link: (style: inherit, weight: bold),
 	bold: (style: inherit, weight: bold),
@@ -44,7 +45,7 @@ $font-types: (
 
 $line-heights: (
 	default: 1.2,
-	paragraph: 1.6,
+	paragraph: 1.7,
 	code: 1.4,
 	heading: 1.6
 );
@@ -57,7 +58,8 @@ $paragraphings: (
 	default: 0,
 	paragraph: $font-size-base * 1,
 	paragraph-small: $font-size-base * 0.4,
-	links: $font-size-base * 0.8
+	metadata: $font-size-base * 2,
+	links: $font-size-base * 1
 );
 
 @mixin paragraphing($type: default) {

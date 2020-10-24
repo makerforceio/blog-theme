@@ -6,25 +6,14 @@
 
 	{{!-- This is the post loop - each post will be output using this markup --}}
 	{{#foreach posts}}
-	<article class="article {{post_class}}">
-		<h2><a href="{{url}}">{{title}}</a></h2>
-		<p>
-			{{excerpt words="26"}}
-			<a class="read-more" href="{{url}}">&raquo;</a>
-		</p>
-		<footer class="article-meta">
-			{{#if authors}}
-			{{#foreach authors}}
-			{{#if profile_image}}
-			<img class="author-avatar" alt="{{name}}'s profile" src="{{img_url profile_image}}" width="32" />
-			{{/if}}
-			<a class="author-name" href="{{url}}">{{name}}</a>
-			{{/foreach}}
-			{{/if}}
-			<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-			<span class="post-tags">&nbsp;{{tags prefix="on "}}</span>
-		</footer>
-	</article>
+		<article class="{{post_class}}">
+			<h2><a href="{{url}}">{{title}}</a></h2>
+			<p>
+				{{excerpt words="26"}}
+				<a class="read-more" title="Read post" href="{{url}}">&raquo;</a>
+			</p>
+			{{> "article-meta"}}
+		</article>
 	{{/foreach}}
 
 	<div class="pagination-bottom">

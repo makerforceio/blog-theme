@@ -10,7 +10,7 @@
 		"ghost-theme"
 	],
 	"scripts": {
-		"all": "yarn setup && yarn build && yarn zip",
+		"all": "npm run setup && npm run build && npm run zip",
 		"setup": "./fetch-hljs.sh",
 		"build": "grunt",
 		"watch": "grunt watch",
