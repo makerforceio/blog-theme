@@ -1,13 +1,13 @@
 <nav class="navigation">
 	<div class="brand">
-		{{#if @blog.logo}}
-		<a href="{{@blog.url}}"><img class="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="48" width="48" /></a>
+		{{#if @site.logo}}
+		<a href="{{@site.url}}"><img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" height="48" width="48" /></a>
 		{{else}}
-		<a href="{{@blog.url}}"><img class="logo" src="{{asset "/images/mark.svg"}}" alt="{{@blog.title}}" height="48" width="48" /></a>
+		<a href="{{@site.url}}"><img class="logo" src="{{asset "/images/mark.svg"}}" alt="{{@site.title}}" height="48" width="48" /></a>
 		{{/if}}
-		<!-- for testing <span class="name">{{@blog.title}}</span> -->
+		<!-- for testing <span class="name">{{@site.title}}</span> -->
 	</div>
-	{{#if @blog.navigation}}
+	{{#if @site.navigation}}
 	<ul class="links">
 		{{#foreach navigation}}
 		<li class="link navigation-{{slug}} {{#if current}}current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>

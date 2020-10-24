@@ -1,23 +1,28 @@
 {
-  "name": "MakerForce",
-  "private": true,
-  "version": "0.2.3",
-  "scripts": {
-    "all": "yarn setup && yarn build && yarn zip",
-    "setup": "./fetch-hljs.sh",
-    "build": "grunt",
-    "zip": "zip -r blog-theme.zip package.json assets partials *.hbs"
-  },
-  "devDependencies": {
-    "grunt": "1.3.0",
-    "grunt-contrib-watch": "1.1.0",
-    "grunt-sass": "3.1.0",
-    "node-sass": "4.14.1"
-  },
-  "config": {
-    "posts_per_page": 12
-  },
-  "engines": {
-    "ghost-api": "v3"
-  }
+	"name": "makerforce",
+	"private": true,
+	"version": "0.3.0",
+	"author": {
+		"email": "ambrose@makerforce.io",
+		"name": "Ambrose Chua"
+	},
+	"keywords": ["ghost-theme"],
+	"scripts": {
+		"all": "yarn setup && yarn build && yarn zip",
+		"setup": "./fetch-hljs.sh",
+		"build": "grunt",
+		"zip": "zip -r blog-theme.zip package.json assets partials *.hbs"
+	},
+	"devDependencies": {
+		"grunt": "1.3.0",
+		"grunt-contrib-watch": "1.1.0",
+		"grunt-sass": "3.1.0",
+		"node-sass": "4.14.1"
+	},
+	"config": {
+		"posts_per_page": 12
+	},
+	"engines": {
+		"ghost-api": "v3"
+	}
 }

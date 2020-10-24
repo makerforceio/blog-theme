@@ -7,7 +7,7 @@
 
 	{{!-- Page Meta --}}
 	<title>{{meta_title}}</title>
-	<meta name="description" content="{{meta_description}}" />
+	{{ghost_head}}
 
 	{{!-- Mobile Meta --}}
 	<meta name="HandheldFriendly" content="True" />
@@ -30,9 +30,6 @@
 	<link rel="stylesheet" href="{{asset "js/highlight/styles/solarized-light.min.css"}}" />
 	<script src="{{asset "js/highlight/highlight.min.js"}}" async></script>
 	<script src="{{asset "js/syntax.js"}}" async></script>
-
-	{{!-- Ghost outputs important style and meta data with this tag --}}
-	{{ghost_head}}
 </head>
 <body class="{{body_class}}">
 	

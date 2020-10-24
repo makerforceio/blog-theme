@@ -6,7 +6,7 @@
 
     {{!-- Page Meta --}}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+    {{amp_ghost_head}}
 
     {{!-- Mobile Meta --}}
     <meta name="HandheldFriendly" content="True" />
@@ -15,8 +15,6 @@
     {{!-- Brand icon --}}
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 	<meta name="theme-color" content="#4bb6f6" />
-
-    {{amp_ghost_head}}
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:400,700" />
@@ -428,13 +426,13 @@
 	
 	<nav class="navigation">
 		<div class="brand">
-			{{#if @blog.logo}}
-			<a href="{{@blog.url}}"><amp-img class="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="32" width="32" /></a>
+			{{#if @site.logo}}
+			<a href="{{@site.url}}"><amp-img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" height="32" width="32" /></a>
 			{{else}}
-			<a href="{{@blog.url}}"><amp-img class="logo" src="{{asset "/images/mark.svg"}}" alt="{{@blog.title}}" height="48" width="48" /></a>
+			<a href="{{@site.url}}"><amp-img class="logo" src="{{asset "/images/mark.svg"}}" alt="{{@site.title}}" height="48" width="48" /></a>
 			{{/if}}
 		</div>
-		{{#if @blog.navigation}}
+		{{#if @site.navigation}}
 		<ul class="links">
 			{{#foreach navigation}}
 			<li class="link navigation-{{slug}} {{#if current}}current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
