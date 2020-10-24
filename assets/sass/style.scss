@@ -17,6 +17,7 @@
 @import "components/header";
 @import "components/pagination";
 @import "components/article-meta";
+@import "components/cols";
 
 // Organisms
 @import "partials/content";
@@ -24,21 +25,5 @@
 @import "partials/navigation";
 @import "partials/footer";
 
-/*
-@import "partials/content";
-@import "partials/footer";
-
-@import "partials/articles";
-@import "partials/article-meta";
-@import "partials/pagination";
-@import "partials/author";
-
-@import "partials/responsive";
-
-@import "content/products";
-@import "content/product";
-
-@import "content/tag-show";
-
-@import "content/page-team";
-*/
+// Content specific
+@import "content/podcast";

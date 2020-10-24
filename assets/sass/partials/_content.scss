@@ -13,6 +13,8 @@ header,
 
 .post-full > * {
 	@extend .limit-width;
+	// Force inline elements into block elements
+	display: block;
 }
 
 .post-meta {

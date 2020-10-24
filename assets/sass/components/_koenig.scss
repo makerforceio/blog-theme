@@ -2,7 +2,8 @@
 	text-align: center;
 }
 
-.post-full .kg-width-wide {
+.post-full .kg-width-wide,
+.post-full .width-wide {
     max-width: 1040px;
 
 	img {
@@ -10,7 +11,8 @@
 	}
 }
 
-.post-full .kg-width-full {
+.post-full .kg-width-full,
+.post-full .width-full {
     max-width: 100vw;
 
 	img {

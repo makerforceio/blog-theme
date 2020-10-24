@@ -125,9 +125,16 @@ figure {
 	@include line-height(paragraph);
 	@include paragraphing(paragraph);
 
-	img {
+	img,
+	picture,
+	iframe {
 		max-width: 100%;
 		border-radius: 0.25em;
+	}
+
+	iframe {
+		width: 100%;
+		height: 38rem;
 	}
 
 	figcaption {
