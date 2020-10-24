@@ -2,6 +2,10 @@
 
 {{#tag}}
 
+{{#if feature_image}}
+<img class="post-feature-image" src="{{feature_image}}" width="1024">
+{{/if}}
+
 <header class="tag">
 	<h1 class="tag-name">{{name}}</h2>
 	{{#if description}}

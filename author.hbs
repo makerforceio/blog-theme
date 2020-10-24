@@ -2,6 +2,10 @@
 
 {{#author}}
 
+{{#if feature_image}}
+<img class="post-feature-image" src="{{feature_image}}" width="1024">
+{{/if}}
+
 <header class="author">
 	{{#if profile_image}}
 		<img class="author-avatar" alt="{{name}}'s profile" src="{{img_url profile_image}}" width="32" />
