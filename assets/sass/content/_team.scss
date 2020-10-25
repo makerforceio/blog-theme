@@ -1,0 +1,30 @@
+.team-member {
+	display: flex;
+	gap: 2rem;
+	justify-content: top;
+
+	@include paragraphing(paragraph);
+
+	.profile {
+		figure, img {
+			width: calc(2em + 10vw); 
+			height: calc(2em + 10vw);
+			max-width: 8em;
+			max-height: 8em;
+			border-radius: 50%;
+		}
+	}
+
+	.details {
+		flex: 1 1 0;
+
+		h2, p {
+			@include paragraphing(paragraph-small);
+		}
+
+		h1 {
+			@include paragraphing(paragraph-small);
+			margin-top: 1rem;
+		}
+	}
+}

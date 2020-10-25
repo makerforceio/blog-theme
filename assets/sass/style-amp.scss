@@ -14,18 +14,17 @@
 
 // Molecules
 @import "components/nav";
-@import "components/pagination";
 @import "components/article-meta";
 @import "components/cols";
-// Compatibility
-// REMOVED FOR AMP
 
 // Organisms
 @import "partials/header";
 @import "partials/content";
-@import "partials/articles";
 @import "partials/navigation";
 @import "partials/footer";
+
+// Compatibility
+// REMOVED FOR AMP
 
 // Content specific
 @import "content/podcast";

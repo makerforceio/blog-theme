@@ -17,8 +17,6 @@
 @import "components/pagination";
 @import "components/article-meta";
 @import "components/cols";
-// Compatibility
-@import "components/compat-markdown";
 
 // Organisms
 @import "partials/header";
@@ -27,5 +25,9 @@
 @import "partials/navigation";
 @import "partials/footer";
 
+// Compatibility
+@import "components/compat-markdown";
+
 // Content specific
 @import "content/podcast";
+@import "content/team";
