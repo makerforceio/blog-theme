@@ -155,7 +155,7 @@ figure {
 code,
 pre {
 	@include font-family(mono);
-	@include font-size();
+	@include font-size(code);
 	@include line-height(code);
 	border-radius: $base-radius;
 	padding: 0.3em 0.45em;
