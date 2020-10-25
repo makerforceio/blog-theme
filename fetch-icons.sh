@@ -2,7 +2,7 @@
 
 VERSION=5.15.1
 ICONS_BRANDS="instagram twitter youtube github snapchat"
-ICONS_SOLID="envelope rss globe-asia"
+ICONS_SOLID="envelope rss globe-asia adjust sun moon"
 TARGET="partials/icons"
 
 set -eu

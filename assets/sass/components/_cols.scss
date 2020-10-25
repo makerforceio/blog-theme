@@ -1,8 +1,11 @@
+// This is intended for 2-column rows, because of breakpoints
 .post-full {
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 2rem;
+
+		//gap: 0 2rem;
+		.col:first-child { margin-right: 2rem; }
 
 		.col {
 			flex: 1 1 32rem;

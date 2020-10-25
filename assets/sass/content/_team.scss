@@ -1,9 +1,11 @@
 .team-member {
-	display: flex;
-	gap: 2rem;
-	justify-content: top;
-
 	@include paragraphing(paragraph);
+
+	display: flex;
+	justify-content: top;
+	
+	//gap: 2rem;
+	.profile { margin-right: 2rem; }
 
 	.profile {
 		figure, img {

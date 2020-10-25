@@ -1,0 +1,41 @@
+.theme-toggle {
+	@include font-size(small);
+	color: palette(blur);
+	cursor: pointer;
+
+	display: inline-block;
+	padding: 0.5em 0.25em;
+		
+	.theme-toggle-name {
+		margin-left: 0.2em;
+	}
+
+	@media (max-width: 480px) {
+		@include font-size(normal);
+
+		.theme-toggle-name {
+			display: none;
+		}
+	}
+}
+
+body:not(.theme-dark):not(.theme-light) {
+	.theme-toggle-dark,
+	.theme-toggle-light {
+		display: none;
+	}
+}
+
+body.theme-dark {
+	.theme-toggle-system,
+	.theme-toggle-light {
+		display: none;
+	}
+}
+
+body.theme-light {
+	.theme-toggle-system,
+	.theme-toggle-dark {
+		display: none;
+	}
+}

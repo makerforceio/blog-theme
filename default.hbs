@@ -31,6 +31,8 @@
 	<script src="{{asset "js/mailgo.min.js"}}" defer></script>
 </head>
 <body class="{{body_class}}">
+	{{!-- Theme --}}
+	<script src="{{asset "js/theme-toggle.js"}}"></script>
 	
 	{{!-- IE disclaimer --}}
 	<!--[if lte IE 10]>
@@ -61,16 +63,25 @@
 	
 	{{!-- The blog footer --}}
 	<footer class="footer">
-		<div class="group">
-			<div class="brand">
-				<span class="name">{{@site.title}}</span>
+		<div class="footer-flex">
+			<div class="footer-left">
+				<div class="group">
+					<div class="brand">
+						<span class="name">{{@site.title}}</span>
+					</div>
+				</div>
+				<div class="group">
+					{{navigation type="secondary"}}
+				</div>
+				<div class="group">
+					{{> navigation-social}}
+				</div>
 			</div>
-		</div>
-		<div class="group">
-			{{navigation type="secondary"}}
-		</div>
-		<div class="group">
-			{{> navigation-social}}
+			<div class="footer-right">
+				<div class="group">
+					{{> theme-toggle}}
+				</div>
+			</div>
 		</div>
 	</footer>
 
