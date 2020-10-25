@@ -23,7 +23,9 @@ function setTheme(theme) {
 	if (cls === undefined) {
 		return;
 	}
-	document.body.classList.add(cls.name);
+	if (cls.name) {
+		document.body.classList.add(cls.name);
+	}
 }
 
 function toggleTheme() {
