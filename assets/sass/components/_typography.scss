@@ -3,7 +3,7 @@
 h1, h2, h3, h4, h5, h6 {
 	@include font-type(heading);
 	@include line-height(heading);
-	@include paragraphing(paragraph-small);
+	@include paragraphing(paragraph);
 }
 
 h1 {

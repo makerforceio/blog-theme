@@ -2,36 +2,29 @@
 
 .articles {
 	article {
-		margin: 4rem 0;
+		margin: 6rem 0;
 	}
 }
 
 .preview {
 	@extend .post-full;
 
-	min-height: 4rem;
-	max-height: 20rem;
+	min-height: 8rem;
+	max-height: 32rem;
 	margin-bottom: -1rem;
 
 	overflow: hidden;
 	// Restore margins due to overflow: hidden
-	margin-top: $font-size-base * -0.4;
+	margin-top: $font-size-base * -1;
 
 	// Ignore IE11
 	$gradient: linear-gradient(to bottom, black 0%, black 66%, transparent 100%);
 	-webkit-mask-image: $gradient;
 	mask-image: $gradient;
 
-	p,
-	ol, ul,
-	blockquote,
-	figure,
-	pre {
-		@include paragraphing(paragraph-small);
-	}
-
 	h1 {
 		@include font-size(h3);
+		@include paragraphing(paragraph); // Restore margin-top
 	}
 
 	h2 {
