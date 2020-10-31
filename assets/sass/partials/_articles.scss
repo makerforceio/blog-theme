@@ -2,15 +2,15 @@
 
 .articles {
 	article {
-		margin: 6rem 0;
+		margin: 4rem 0;
 	}
 }
 
 .preview {
 	@extend .post-full;
 
-	min-height: 8rem;
-	max-height: 32rem;
+	min-height: 4rem;
+	max-height: 24rem;
 	margin-bottom: -1rem;
 
 	overflow: hidden;
@@ -24,7 +24,7 @@
 
 	h1 {
 		@include font-size(h3);
-		@include paragraphing(paragraph); // Restore margin-top
+		@include paragraphing(paragraph-small);
 	}
 
 	h2 {
