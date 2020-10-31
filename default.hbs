@@ -32,7 +32,25 @@
 	{{!-- Improved mailto links --}}
 	<script src="{{asset "js/mailgo.min.js"}}" defer></script>
 	{{!-- Math --}}
-	{{> head-math-each}}
+	{{#contentFor "scripts-math"}}
+	<link rel="stylesheet" href="{{asset "js/katex/katex.min.css"}}">
+	<script src="{{asset "js/katex/katex.min.js"}}" defer></script>
+	<script src="{{asset "js/katex/contrib/auto-render.min.js"}}" defer></script>
+	<script src="{{asset "js/math.js"}}" defer></script>
+	{{/contentFor}}
+	{{#is "index, tag, author"}}
+		{{{block "scripts-math"}}}
+	{{/is}}
+	{{#post}}
+		{{#has tag="#math"}}
+			{{{block "scripts-math"}}}
+		{{/has}}
+	{{/post}}
+	{{#page}}
+		{{#has tag="#math"}}
+			{{{block "scripts-math"}}}
+		{{/has}}
+	{{/page}}
 </head>
 <body class="{{body_class}}">
 	{{!-- Theme --}}
