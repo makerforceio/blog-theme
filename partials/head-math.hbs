@@ -1,0 +1,8 @@
+{{#has tag="#math"}}
+	<!-- This repeats many times because handlebars is a limited templating engine -->
+	<link rel="stylesheet" href="{{asset "js/katex/katex.min.css"}}">
+	<script src="{{asset "js/katex/katex.min.js"}}" defer></script>
+	<script src="{{asset "js/katex/contrib/auto-render.min.js"}}" defer></script>
+	<script src="{{asset "js/math.js"}}" defer></script>
+	<!-- Ugh -->
+{{/has}}

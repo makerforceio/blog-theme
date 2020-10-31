@@ -47,43 +47,50 @@
 	</nav>
 
     {{#post}}
-	<main>
-
-		{{#if feature_image}}
-			<amp-img class="post-feature-image" src="{{feature_image}}" width="1024" height="1024" layout="responsive"></amp-img>
-		{{/if}}
-
-		<article class="post-full {{post_class}}">
-			<header>
-				<h1>{{title}}</h1>
-			</header>
-
-			{{amp_content}}
-
-			<div class="post-meta">
-				<footer class="article-meta">
-					<span class="authors">
-					{{#if authors}}
-						{{#foreach authors}}
-							<span class="author">
-								<a href="{{url}}">
-									{{#if profile_image}}
-										<amp-img class="author-avatar" alt="{{name}}" src="{{img_url profile_image size="xs"}}" width="32" height="32"></amp-img>
-									{{/if}}
-									<span class="author-name">{{name}}</a>
-								</a>
-							</span>
-						{{/foreach}}
-					{{/if}}
-					</span>
-					<span class="details">
-						<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix="on "}}
-					</span>
-				</footer>
+		{{#has tag="#math"}}
+			<div class="warning">
+				This page makes use of math that may have failed to render. <a href="{{url}}">View it here</a> instead.
 			</div>
-		</article>
+		{{/has}}
 
-	</main>
+		<main>
+
+			{{#if feature_image}}
+				<amp-img class="post-feature-image" src="{{feature_image}}" width="1024" height="1024" layout="responsive"></amp-img>
+			{{/if}}
+
+			<article class="post-full {{post_class}}">
+
+				<header>
+					<h1>{{title}}</h1>
+				</header>
+
+				{{amp_content}}
+
+				<div class="post-meta">
+					<footer class="article-meta">
+						<span class="authors">
+						{{#if authors}}
+							{{#foreach authors}}
+								<span class="author">
+									<a href="{{url}}">
+										{{#if profile_image}}
+											<amp-img class="author-avatar" alt="{{name}}" src="{{img_url profile_image size="xs"}}" width="32" height="32"></amp-img>
+										{{/if}}
+										<span class="author-name">{{name}}</a>
+									</a>
+								</span>
+							{{/foreach}}
+						{{/if}}
+						</span>
+						<span class="details">
+							<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix="on "}}
+						</span>
+					</footer>
+				</div>
+			</article>
+
+		</main>
     {{/post}}
 
 	{{!-- The blog footer --}}
@@ -100,7 +107,6 @@
 			{{> navigation-social}}
 		</div>
 	</footer>
-	
 
 </body>
 </html>

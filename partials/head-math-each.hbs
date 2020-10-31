@@ -1,0 +1,11 @@
+{{#is "index, tag, author"}}
+	{{#foreach posts}}
+		{{> head-math}}
+	{{/foreach}}
+{{/is}}
+{{#post}}
+	{{> head-math}}
+{{/post}}
+{{#page}}
+	{{> head-math}}
+{{/page}}
