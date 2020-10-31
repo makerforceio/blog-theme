@@ -1,12 +1,12 @@
 'use strict';
 
-document.querySelectorAll('code').forEach((block) => {
+document.querySelectorAll('.post.tag-hash-uses-math code').forEach((block) => {
 	// Detect language and check if loaded
 	const languageDetectRe = /\blang(?:uage)?-([\w-]+)\b/i;
 	const match = languageDetectRe.exec(block.className);
 
 	if (!match) {
-		return
+		return;
 	}
 
 	if (match && match[1] !== 'latex') {
@@ -31,7 +31,7 @@ document.querySelectorAll('code').forEach((block) => {
 	});
 });
 
-document.querySelectorAll('.post.tag-hash-math').forEach((block) => {
+document.querySelectorAll('.post.tag-hash-uses-math').forEach((block) => {
 	renderMathInElement(block, {
 		throwOnError: false,
 
