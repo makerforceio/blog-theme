@@ -11,7 +11,7 @@
 	],
 	"scripts": {
 		"all": "npm run setup && npm run build && npm run zip",
-		"setup": "./fetch-hljs.sh",
+		"setup": "./fetch-hljs.sh && ./fetch-katex.sh && ./fetch-icons.sh && ./fetch-mailgo.sh",
 		"build": "grunt",
 		"watch": "grunt watch",
 		"zip": "zip -r blog-theme.zip package.json assets partials *.hbs"
@@ -20,7 +20,7 @@
 		"grunt": "1.3.0",
 		"grunt-contrib-watch": "1.1.0",
 		"grunt-sass": "3.1.0",
-		"node-sass": "4.14.1"
+		"sass": "1.28.0"
 	},
 	"config": {
 		"posts_per_page": 12

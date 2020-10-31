@@ -12,7 +12,7 @@ $font-sizes: (
 	h3: 1.2em,
 	h4: 1em,
 	h5: 0.8em,
-	h6: 0.6em
+	h6: 0.8em // should not be used
 );
 
 @mixin font-size($type: normal) {

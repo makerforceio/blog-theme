@@ -1,9 +1,48 @@
+@use "sass:color";
+
 .articles {
 	article {
 		margin: 4rem 0;
+	}
+}
 
-		p {
-			@include paragraphing(paragraph-small);
-		}
+.preview {
+	@extend .post-full;
+
+	min-height: 4rem;
+	max-height: 20rem;
+	margin-bottom: -1rem;
+
+	overflow: hidden;
+	// Restore margins due to overflow: hidden
+	margin-top: $font-size-base * -0.4;
+
+	// Ignore IE11
+	$gradient: linear-gradient(to bottom, black 0%, black 66%, transparent 100%);
+	-webkit-mask-image: $gradient;
+	mask-image: $gradient;
+
+	p,
+	ol, ul,
+	blockquote,
+	figure,
+	pre {
+		@include paragraphing(paragraph-small);
+	}
+
+	h1 {
+		@include font-size(h3);
+	}
+
+	h2 {
+		@include font-size(h4);
+	}
+
+	h3 {
+		@include font-size(h5);
+	}
+
+	h4, h5, h6 {
+		@include font-size(h6);
 	}
 }

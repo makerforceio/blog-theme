@@ -3,6 +3,7 @@
 node_modules/
 assets/css/
 assets/js/highlight/
+assets/js/katex/
 partials/icons/
 partials/style-amp.hbs*
 blog-theme.zip

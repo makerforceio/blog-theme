@@ -11,27 +11,46 @@ html {
 	color-profile: sRGB; // Ensure embedded colour profiles are not used 
 }
 
+@mixin themed($element) {
+	#{$element} {
+		@content(light);
+
+		@media (prefers-color-scheme: dark) {
+			@content(dark);
+		}
+
+		&.theme-light {
+			@content(light);
+		}
+
+		&.theme-dark {
+			@content(dark);
+		}
+	}
+
+	.theme-light #{$element} {
+		@content(light);
+	}
+
+	.theme-dark #{$element} {
+		@content(dark);
+	}
+}
+
 body {
 	font-size: $font-size-base;
+	overflow-wrap: break-word; // TODO: Test the impact of this on all pages
+}
 
-	color: palette(text);
-	background-color: palette(background); 
-
-	@media (prefers-color-scheme: dark) {
-		color: palette(text-dark);
-		background-color: palette(background-dark); 
-	}
-
-	&.theme-dark {
-		color: palette(text-dark);
-		background-color: palette(background-dark); 
-	}
-	&.theme-light {
+@include themed(body) using ($theme) {
+	@if $theme == light {
 		color: palette(text);
 		background-color: palette(background); 
 	}
-
-	overflow-wrap: break-word; // TODO: Test the impact of this on all pages
+	@if $theme == dark {
+		color: palette(text-dark);
+		background-color: palette(background-dark); 
+	}
 }
 
 @media screen and (min-width: 960px) {
