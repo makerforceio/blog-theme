@@ -152,38 +152,92 @@ figure {
 	}
 }
 
-code,
-pre {
+pre, code {
+	border-radius: $base-radius;
+}
+
+$code-padding: 0.3em 0.45em;
+
+code {
 	@include font-family(mono);
 	@include font-size(code);
 	@include line-height(code);
-	border-radius: $base-radius;
-	padding: 0.3em 0.45em;
 
-	background-color: palette(code-background);
-	color: palette(code);
-}
-pre.hljs,
-code.hljs { // override .hljs default styles
-	display: inline; // remove of display block
-	padding: 0.3em 0.45em; // custom padding
-
-	background-color: palette(code-background); // custom background
-	// color is not declared here to allow .hljs styles to dominate
-}
-pre,
-pre.hljs {
-	@include paragraphing(paragraph);
-	overflow-x: auto; // scrollable code
-	padding: 0; // so that a seprate block for <code> is not needed
-	display: block; // takes effect if .hljs was applied on pre
-
-	code,
-	code.hljs {
-		display: block; // so that padding can be applied on code in a block manner
-		// padding is not set to zero so that the scrollable area is exactly the arcea covered by the background
-		background: none; // prevent background from covering neighbouring lines
+	padding: $code-padding;
+	&.hljs {
+		padding: $code-padding;
+		display: inline; // override .hljs default styles
 	}
+}
+
+pre {
+	@include paragraphing(paragraph);
+	@include line-height(code);
+
+	overflow-x: auto; // scrollable code
+
+	code {
+		display: block;
+		&.hljs {
+			display: block;
+		}
+	}
+}
+
+@include themed("code", "code.hljs") using ($theme) {
+	@if $theme == light {
+		color: palette(code);
+		background-color: palette(code-background);
+	}
+	@if $theme == dark {
+		color: palette(code-dark);
+		background-color: palette(code-background);
+	}
+}
+
+table {
+	@include font-size();
+	@include line-height(table);
+	@include paragraphing(paragraph);
+}
+
+th, td {
+	border: 3px solid transparent;
+	padding: 0.6rem 1rem;
+
+	pre {
+		@include paragraphing(paragraph-small);
+	}
+	code {
+		padding: 0;
+		&.hljs {
+			padding: 0;
+		}
+	}
+}
+
+th {
+	background: palette(table-header-background);
+	background-clip: padding-box;
+	color: palette(text-dark);
+
+	code {
+		color: palette(code-dark);
+	}
+}
+
+@include themed("td code", "td code.hljs") using ($theme) {
+	background: none;
+}
+
+@include themed("th code", "th code.hljs") using ($theme) {
+	color: palette(text-dark);
+	background: none;
+}
+
+td {
+	background: palette(table-background);
+	background-clip: padding-box;
 }
 
 hr {

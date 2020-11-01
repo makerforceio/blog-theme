@@ -11,29 +11,31 @@ html {
 	color-profile: sRGB; // Ensure embedded colour profiles are not used 
 }
 
-@mixin themed($element) {
-	#{$element} {
-		@content(light);
+@mixin themed($elements...) {
+	@each $element in $elements {
+		#{$element} {
+			@content(light);
 
-		@media (prefers-color-scheme: dark) {
-			@content(dark);
+			@media (prefers-color-scheme: dark) {
+				@content(dark);
+			}
+
+			&.theme-light {
+				@content(light);
+			}
+
+			&.theme-dark {
+				@content(dark);
+			}
 		}
 
-		&.theme-light {
+		.theme-light #{$element} {
 			@content(light);
 		}
 
-		&.theme-dark {
+		.theme-dark #{$element} {
 			@content(dark);
 		}
-	}
-
-	.theme-light #{$element} {
-		@content(light);
-	}
-
-	.theme-dark #{$element} {
-		@content(dark);
 	}
 }
 

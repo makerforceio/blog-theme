@@ -21,7 +21,7 @@ $font-sizes: (
 
 $font-families: (
 	default: ("Roboto Slab", "Helvetica Neue", "Helvetica", "sans-serif"),
-	mono: ("Fira Code", "Menlo", "Monaco", "monospace")
+	mono: ("Fira Mono", "Menlo", "Monaco", "monospace")
 );
 
 @mixin font-family($type: default) {
@@ -46,6 +46,7 @@ $font-types: (
 
 $line-heights: (
 	default: 1.2,
+	table: 1.4,
 	paragraph: 1.7,
 	code: 1.4,
 	heading: 1.6

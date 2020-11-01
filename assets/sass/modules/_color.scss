@@ -21,6 +21,9 @@ $palette: (
 	blur-active: mix($text-color, $background-color, 55%),
 	code-background: mix(mix($text-color, $background-color), transparent, 8%),
 	code: mix($text-color, $background-color, 60%),
+	code-dark: mix($text-dark-color, $background-dark-color, 70%),
+	table-background: mix(mix($text-color, $background-color), transparent, 20%),
+	table-header-background: $accent-color,
 	hr: $accent-color, 
 );
 

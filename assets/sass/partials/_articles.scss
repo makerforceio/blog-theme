@@ -26,7 +26,8 @@
 	ol, ul,
 	blockquote,
 	figure,
-	pre {
+	pre,
+	table {
 		@include paragraphing(paragraph-small);
 	}
 
