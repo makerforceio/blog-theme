@@ -11,6 +11,8 @@ header,
 	@extend .limit-width;
 }
 
+// Big stuff
+
 .post-feature-image {
 	margin-left: -2rem;
 	margin-right: -2rem;
@@ -24,6 +26,21 @@ header,
 	}
 }
 
+// Nice components
+
+.banner {
+	@include paragraphing(paragraph);
+	text-align: center;
+	border: 3px solid palette(hr);
+	padding: 1.5rem;
+}
+
+.post-meta {
+	@include paragraphing(metadata);
+}
+
+// Layouts
+
 .post-full > * {
 	@extend .limit-width;
 }
@@ -32,10 +49,6 @@ header,
 .post-full > img {
 	// Force inline elements into block elements
 	display: block;
-}
-
-.post-meta {
-	@include paragraphing(metadata);
 }
 
 main {
