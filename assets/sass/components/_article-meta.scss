@@ -11,7 +11,13 @@
 	.authors, .details {
 		flex: 1 1 auto;
 		display: block;
-		@include paragraphing(paragraph-small);
+	}
+
+	.authors,
+	.author,
+	.details {
+		margin-top: $font-size-base * 0.2;
+		margin-bottom: $font-size-base * 0.2;
 	}
 
 	.details {
@@ -19,10 +25,11 @@
 	}
 
 	.author {
-		margin-right: 1em;
+		display: inline-block;
+		margin-right: 0.66em;
 	}
 	.author-name {
-		margin-left: 0.25em;
+		margin-left: 0.33em;
 	}
 	.author-avatar {
 		width: 3.2rem;

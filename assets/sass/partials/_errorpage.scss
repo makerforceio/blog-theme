@@ -1,0 +1,9 @@
+.errorpage-404 {
+	background: url(../images/404.svg) repeat center center / 16rem auto;
+}
+
+.errorpage-primary {
+	margin: $font-size-base * 9 0;
+	text-align: center;
+	@include font-size(medium);
+}

@@ -6,8 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	{{!-- Page Meta --}}
-	<title>{{meta_title}}</title>
-	{{ghost_head}}
+	<title>{{statusCode}} {{message}}</title>
 
 	{{!-- Mobile Meta --}}
 	<meta name="HandheldFriendly" content="True">
@@ -23,36 +22,10 @@
 	<link rel="stylesheet" href="{{asset "css/style.css"}}">
 	{{!-- Roboto Slab --}}
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Slab:wght@400;700&display=swap">
-	{{!-- Gallery --}}
-	<script src="{{asset "js/gallery-card.js"}}" defer></script>
-	{{!-- Syntax highlighting --}}
-	<link rel="stylesheet" href="{{asset "js/highlight/styles/solarized-light.min.css"}}">
-	<script src="{{asset "js/highlight/highlight.min.js"}}" defer></script>
-	<script src="{{asset "js/syntax.js"}}" defer></script>
 	{{!-- Improved mailto links --}}
 	<script src="{{asset "js/mailgo.min.js"}}" defer></script>
-	{{!-- Math --}}
-	{{#contentFor "scripts-math"}}
-	<link rel="stylesheet" href="{{asset "js/katex/katex.min.css"}}">
-	<script src="{{asset "js/katex/katex.min.js"}}" defer></script>
-	<script src="{{asset "js/katex/contrib/auto-render.min.js"}}" defer></script>
-	<script src="{{asset "js/math.js"}}" defer></script>
-	{{/contentFor}}
-	{{#is "index, tag, author"}}
-		{{{block "scripts-math"}}}
-	{{/is}}
-	{{#post}}
-		{{#has tag="#uses-math"}}
-			{{{block "scripts-math"}}}
-		{{/has}}
-	{{/post}}
-	{{#page}}
-		{{#has tag="#uses-math"}}
-			{{{block "scripts-math"}}}
-		{{/has}}
-	{{/page}}
 </head>
-<body class="{{body_class}}{{block "errorpage"}}">
+<body class="errorpage errorpage-{{statusCode}}">
 	{{!-- Theme --}}
 	<script src="{{asset "js/theme-toggle.js"}}"></script>
 	
@@ -78,8 +51,14 @@
 
 	<main>
 
-		{{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-		{{{body}}}
+		<section class="errorpage-primary">
+			<h1>
+				Oh no! {{message}}
+			</h1>
+			<p>
+				Go <a href="javascript:window.history.back()">backwards</a> or visit the <a href="/">homepage</a>
+			</p>
+		</section>
 
 	</main>
 	
@@ -106,9 +85,6 @@
 			</div>
 		</div>
 	</footer>
-
-	{{!-- Ghost outputs important scripts and data with this tag --}}
-	{{ghost_foot}}
 
 </body>
 </html>

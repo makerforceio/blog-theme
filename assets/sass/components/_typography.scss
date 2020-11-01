@@ -199,7 +199,14 @@ table {
 	@include font-size();
 	@include line-height(table);
 	@include paragraphing(paragraph);
+
+	overflow: auto;
+
+	@media screen and (max-width: 720px) {
+		@include font-size(smaller);
+	}
 }
+	
 
 th, td {
 	border: 3px solid transparent;
