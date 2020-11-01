@@ -26,6 +26,10 @@ header,
 
 .post-full > * {
 	@extend .limit-width;
+}
+
+.post-full > iframe,
+.post-full > img {
 	// Force inline elements into block elements
 	display: block;
 }
