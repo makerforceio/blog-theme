@@ -1,5 +1,30 @@
 .errorpage-404 {
-	background: url(../images/404.svg) repeat center center / 16rem auto;
+}
+
+.errorpage-404::before {
+	content: '';
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -100;
+
+	width: 200%;
+	min-width: 16rem * 6 * 2;
+	height: 400%;
+	min-height: 46rem * 2;
+
+	background: url(../images/404.svg) repeat top left / 16rem auto;
+	animation: 30s linear errorpage-move infinite;
+}
+
+@keyframes errorpage-move {
+	0% {
+		transform: translate(-16rem * 6, 0rem);
+	}
+	100% {
+		transform: translate(0rem, -45.14rem);
+	}
 }
 
 .errorpage-primary {
