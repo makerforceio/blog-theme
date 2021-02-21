@@ -51,6 +51,18 @@ header,
 	display: block;
 }
 
+.post-full > table {
+	display: block;
+	width: max-content;
+	overflow-x: auto;
+}
+
+.post-full > p > .katex-display {
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0.333em 0;
+}
+
 main {
 	margin-left: 2rem;
 	margin-right: 2rem;
