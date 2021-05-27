@@ -41,6 +41,11 @@ header,
 
 // Layouts
 
+main {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
 .post-full > * {
 	@extend .limit-width;
 }
@@ -63,7 +68,8 @@ header,
 	padding: 0.333em 0;
 }
 
-main {
-	margin-left: 2rem;
-	margin-right: 2rem;
+// Custom layouts
+
+.post-full.tag-hash-wide-code > pre {
+	@extend .width-wide;
 }
