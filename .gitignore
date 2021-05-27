@@ -4,6 +4,7 @@ node_modules/
 assets/css/
 assets/js/highlight/
 assets/js/katex/
+assets/js/mailgo*
 partials/icons/
 partials/style-amp.hbs*
 blog-theme.zip

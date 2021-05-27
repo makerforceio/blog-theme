@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=10.3.1
+VERSION=10.7.2
 LANGS="rust cpp shell json"
 TARGET="assets/js/highlight"
 
@@ -16,7 +16,7 @@ node ./tools/build.js -t cdn $LANGS
 cd ../../
 
 echo "Copying build to $TARGET/"
-rm -r $TARGET/ || true
+rm -rf $TARGET/ || true
 mkdir -p $TARGET/
 cp -R tmp/highlight.js-*/build/* $TARGET/
 

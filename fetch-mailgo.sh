@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.10.4
+VERSION=0.12.1
 TARGET="assets/js"
 
 set -eu
